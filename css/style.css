@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  -moz-animation: pozadina 30s infinite;
+	-webkit-animation: pozadina 30s infinite;
+	animation: pozadina 30s infinite;
+}
+
+h1{
+  font-size: 3em;
+}
+
+h2{
+    font-size: 2.5em
+}
+
+h3{
+  font-size: 2em;
+}
+
+p{
+   font-size: 1.5em;
+ }
+
+#container{
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  height: 100%;
+}
+
+.top-line{
+  color: white;
+  line-height: 3em;
+  border-bottom: 1px dotted white;
+  overflow: hidden;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.top-line nav{
+  float: right;
+  line-height: 3em;
+  width: 60%;
+}
+
+.logo{
+  float: left;
+}
+
+nav ul{
+  list-style-type: none;
+  text-align: right;
+}
+
+nav ul li{
+  display: inline;
+  line-height: 3em;
+}
+
+nav ul li a{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  width: 30%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+nav ul li a:hover{
+  background-color: rgba(218, 11, 11, 0.6);
+  color: lightblue;
+  cursor: pointer;
+}
+
+.middle-box{
+  height: calc(100% - 6em);
+  width: 100%;
+}
+
+.buttons{
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 100%;
+}
+
+.buttons a{
+  display: inline-block;
+  width: 30%;
+  text-decoration: none;
+  color: white;
+  line-height: 3em;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+
+.buttons a:first-child{
+  margin-right: 2%;
+}
+
+.buttons a:hover{
+  background-color: rgba(218, 11, 11, 0.6);
+  color: lightblue;
+  cursor: pointer;
+}
