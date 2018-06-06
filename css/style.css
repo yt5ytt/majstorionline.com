@@ -4,6 +4,7 @@
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  font-family: serif;
 }
 
 html, body{
@@ -116,4 +117,49 @@ nav ul li a:hover{
   background-color: rgba(218, 11, 11, 0.6);
   color: lightblue;
   cursor: pointer;
+}
+
+.login-form{
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+
+.login-box{
+  width: 50%;
+  padding: 1% 0 0;
+  margin: 0 auto;
+  border: 3px solid white;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+form{
+  line-height: 3em;
+}
+
+form input{
+  line-height: 2em;
+  width: 90%;
+}
+
+input.login-text{
+  text-indent: 2%;
+}
+
+input.submit{
+  width: 30%;
+  background-color:  rgba(218, 11, 11, 0);
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+  line-height: 2.5em;
+}
+
+input.submit:hover{
+  background-color:  rgba(218, 11, 11, 0.6);
+  color: lightblue;
 }
