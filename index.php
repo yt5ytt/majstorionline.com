@@ -2,7 +2,7 @@
   include("header.php");
  ?>
 
-    <title>Radna Akcija - Početna</title>
+    <title>Majstori Online - Početna</title>
   </head>
   <body>
     <div id="container">
