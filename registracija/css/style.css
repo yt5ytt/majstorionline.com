@@ -201,6 +201,10 @@ input.submit:hover{
   cursor: pointer;
 }
 
+.reg-head li:last-child{
+  float: right;
+}
+
 .reg-head li.active{
   background-color: rgba(255, 250, 250, 0.4);
 }
