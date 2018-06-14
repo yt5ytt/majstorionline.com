@@ -7,10 +7,6 @@
   font-family: serif;
 }
 
-html, body{
-height: 100%;
-}
-
 body{
   -moz-animation: pozadina 30s infinite;
 	-webkit-animation: pozadina 30s infinite;

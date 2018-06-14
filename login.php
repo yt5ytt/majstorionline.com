@@ -15,7 +15,7 @@
                 <ul>
                   <li><a href="#">IDEJA SAJTA</a></li>
                   <li><a href="index.php">POČETNA</a></li>
-                  <li><a href="#">REGISTRUJ SE</a></li>
+                  <li><a href="registracija/register.php?korisnik=klijent">REGISTRUJ SE</a></li>
                 </ul>
               </nav>
           </div>

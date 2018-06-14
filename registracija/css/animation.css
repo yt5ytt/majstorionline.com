@@ -1,0 +1,112 @@
+/* аnimacija pozadina */
+
+@-moz-keyframes pozadina {
+	0% {
+		background: url(../img/elektricar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	16%{
+		background: url(../img/keramicar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	32%{
+		background: url(../img/moler.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	48% {
+		background: url(../img/stolar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  64% {
+		background: url(../img/vodoinstalater.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  80% {
+		background: url(../img/zidar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  100% {
+		background: url(../img/elektricar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+}
+
+@-webkit-keyframes pozadina {
+  0% {
+		background: url(../img/elektricar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	16%{
+		background: url(../img/keramicar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	32%{
+		background: url(../img/moler.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	48% {
+		background: url(../img/stolar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  64% {
+		background: url(../img/vodoinstalater.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  80% {
+		background: url(../img/zidar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  100% {
+		background: url(../img/elektricar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+}
+
+@keyframes pozadina{
+  0% {
+		background: url(../img/elektricar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	16%{
+		background: url(../img/keramicar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	32%{
+		background: url(../img/moler.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+	48% {
+		background: url(../img/stolar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  64% {
+		background: url(../img/vodoinstalater.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  80% {
+		background: url(../img/zidar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+
+  100% {
+		background: url(../img/elektricar.jpg) no-repeat top center fixed;
+		background-size: cover;
+	}
+}
