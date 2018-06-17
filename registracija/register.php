@@ -91,7 +91,7 @@
                   $num2 = rand(1,9);
                   $sum = $num1 + $num2;
                  ?>
-                <input class="login-text" type="text" name="potvrda" placeholder="Potvrdite da niste robot: Koliko je <?php echo $num1; ?> + <?php echo $num2; ?> (OBAVEZNO)">
+                <input class="login-text" type="text" name="potvrda" placeholder="Potvrdite da niste robot: Koliko je <?php echo $num1; ?> + <?php echo $num2; ?> (OBAVEZNO)" required>
                 <input type="hidden" name="sum" value="<?php echo $sum; ?>" >
                 <input class="submit" type="submit" name="submit" value="REGISTRUJ SE">
               </form>

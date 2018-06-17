@@ -3,7 +3,7 @@
   include("header.php");
  ?>
 
-    <title>Majstori Online - Registruj se</title>
+    <title>Majstori Online - Registracija</title>
   </head>
   <body>
     <div id="container">
@@ -104,22 +104,6 @@
                   <?php
 
                 }else{
-
-                  /*echo $ident . "<br />";
-                  echo $email . "<br />";
-                  echo $password . "<br />";
-                  echo $username . "<br />";
-                  echo $ime . "<br />";
-                  echo $prezime . "<br />";
-                  echo $adresa . "<br />";
-                  echo $grad . "<br />";
-                  echo $telefon1 . "<br />";
-                  echo $telefon2 . "<br />";
-
-                  if ($db->connect_error) {
-                    die("Connection failed: " . $db->connect_error);
-                  }
-                  echo "Connected successfully";*/
 
                   //Ovde kod da registracija moze da se nastavi
 
