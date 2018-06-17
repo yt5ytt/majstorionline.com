@@ -39,13 +39,14 @@
               </div>
               <div class="reg-body">
                 <form action="reg-function.php" method="post">
-                  <input class="login-text" type="username" name="username" placeholder="Korisničko ime" required>
+                  <input class="login-text" type="text" name="username" placeholder="Korisničko ime" required>
                   <input class="login-text" type="email" name="email" placeholder="Email" required>
                   <input class="login-text" type="text" name="passwd" placeholder="Lozinka" required>
                   <input class="login-text" type="text" name="passwd1" placeholder="Ponovi lozinku" required>
                   <input class="login-text" type="text" name="ime" placeholder="Ime" required>
                   <input class="login-text" type="text" name="prezime" placeholder="Prezime" required>
                   <input class="login-text" type="text" name="adresa" placeholder="Adresa" required>
+                  <input class="login-text" type="text" name="grad" placeholder="Grad" required>
                   <input class="login-text" type="text" name="telefon" placeholder="Kontakt telefon" required>
                   <input class="login-text" type="text" name="telefon1" placeholder="Drugi kontakt telefon (opciono)">
                   <?php
@@ -53,8 +54,9 @@
                     $num2 = rand(1,9);
                     $sum = $num1 + $num2;
                    ?>
-                  <input class="login-text" type="text" name="potvrda" placeholder="Potvrdite da niste robot: Koliko je <?php echo $num1; ?> + <?php echo $num2; ?> (OBAVEZNO)">
+                  <input class="login-text" type="text" name="potvrda" placeholder="Potvrdite da niste robot: Koliko je <?php echo $num1; ?> + <?php echo $num2; ?> (OBAVEZNO)" required>
                   <input type="hidden" name="sum" value="<?php echo $sum; ?>" >
+                  <input type="hidden" name="korisnik" value="klijent">
                   <input class="submit" type="submit" name="submit" value="REGISTRUJ SE">
                 </form>
               </div>
