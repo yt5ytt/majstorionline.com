@@ -132,11 +132,104 @@
 
 
             <?php
-              }elseif($_GET["korisnik"] == "majstor"){
+          }elseif($_POST["submit"] AND $_POST["korisnik"] == "majstor"){
 
                 //Ovde ide forma za majstora
 
+                $rand = rand(1111111, 9999999);
+                $ident = "m" . $rand;
+                $email = $_POST["email"];
+                $password = $_POST["passwd"];
+                $password1 = $_POST["passwd1"];
+                $username = $_POST["username"];
+                $ime = $_POST["ime"];
+                $prezime = $_POST["prezime"];
+                $adresa = $_POST["adresa"];
+                $grad = $_POST["grad"];
+                $telefon = $_POST["telefon"];
+                $opis = $_POST["opis"];
+                $delatnost = $_POST["delatnost"];
+                $potvrda = $_POST["potvrda"];
+                $sum = $_POST["sum"];
 
+                $upit = "select email from majstori";
+                $rez = $db -> query($upit);
+                while($check_mail = mysqli_fetch_object($rez)){
+
+                  $check_email = $check_mail -> email;
+
+                  if($email != $check_email){
+
+                    continue;
+
+                  }elseif($email == $check_email){
+
+                    //Ovde kod za klijenta da email vec postoji
+
+                  ?>
+                    <div class="conf-box">
+                      <h2>Majstor sa ovom email adresom već postoji, pokušajte ponovo!</h2><br />
+                      <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
+
+                    </div>
+
+
+                  <?php
+
+                    goto Footer;
+
+                  }
+
+                }
+
+                if($password != $password1){
+
+                  //Ovde kod da potvrda passworda nije uspela
+                  ?>
+                    <div class="conf-box">
+                      <h2>Niste oba puta upisali istu lozinku, pokušajte ponovo!</h2><br />
+                        <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
+                    </div>
+
+
+                  <?php
+
+                }elseif($potvrda != $sum){
+
+                  //Ovde kod da potvrda za robota nije uspela
+                  ?>
+                    <div class="conf-box">
+                      <h2>Potvrda da niste robot nije uspela, pokušajte ponovo!</h2><br />
+                        <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
+                    </div>
+
+
+                  <?php
+
+                }else{
+
+                  //Ovde kod da registracija moze da se nastavi
+
+                  $sql_upit = "insert into majstori (ident, email, password, username, ime, prezime, adresa, grad, telefon, opis, delatnost) values ('$ident', '$email', '$password', '$username', '$ime', '$prezime', '$adresa', '$grad', '$telefon', '$opis', '$delatnost')";
+                  $upis = $db -> query($sql_upit);
+
+
+                    if($upis){
+
+                    ?>
+                      <div class="conf-box">
+                        <h2>Uspešno ste se registrovali, sad se možete ulogovati!</h2><br />
+                        <a class="submit" href="../login.php">Uloguj se</a>
+                      </div>
+
+
+                    <?php
+                  }else{
+
+                    echo "Doslo je negde do greske";
+
+                  }
+                }
 
             ?>
 

@@ -1,4 +1,5 @@
 <?php
+  include('../db/db_connect.php');
   include("header.php");
  ?>
 
@@ -84,8 +85,32 @@
                 <input class="login-text" type="text" name="ime" placeholder="Ime" required>
                 <input class="login-text" type="text" name="prezime" placeholder="Prezime" required>
                 <input class="login-text" type="text" name="adresa" placeholder="Adresa" required>
+                <input class="login-text" type="text" name="grad" placeholder="Grad" required>
                 <input class="login-text" type="text" name="telefon" placeholder="Kontakt telefon" required>
-                <input class="login-text" type="text" name="telefon1" placeholder="Drugi kontakt telefon (opciono)">
+                <textarea class="login-text" type="text" name="opis" placeholder="Kratak opis delatnosti"></textarea>
+                <select class="login-text" name="delatnost">
+                    <option value="#" selected>--Delatnost--</option>
+                  <?php
+                    $upit1 = "select * from glavni_zanat order by zanat asc";
+                    $rez1 = $db -> query($upit1);
+                    while($obj1 = mysqli_fetch_object($rez1)){
+                      $zanat1 = $obj1 -> zanat;
+                    ?>
+                      <option value="<?php echo $zanat1; ?>"><?php echo $zanat1; ?></option>
+                    <?php
+                    }
+
+                    $upit2 = "select * from pomocni_zanat order by zanat asc";
+                    $rez2 = $db -> query($upit2);
+                    while($obj2 = mysqli_fetch_object($rez2)){
+                      $zanat2 = $obj2 -> zanat;
+                    ?>
+                      <option value="<?php echo $zanat2; ?>"><?php echo $zanat2; ?></option>
+                    <?php
+                    }
+                  ?>
+                </select>
+
                 <?php
                   $num1 = rand(1,9);
                   $num2 = rand(1,9);
@@ -93,6 +118,7 @@
                  ?>
                 <input class="login-text" type="text" name="potvrda" placeholder="Potvrdite da niste robot: Koliko je <?php echo $num1; ?> + <?php echo $num2; ?> (OBAVEZNO)" required>
                 <input type="hidden" name="sum" value="<?php echo $sum; ?>" >
+                <input type="hidden" name="korisnik" value="majstor">
                 <input class="submit" type="submit" name="submit" value="REGISTRUJ SE">
               </form>
             </div>
