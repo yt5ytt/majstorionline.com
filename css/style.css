@@ -139,13 +139,18 @@ form{
   line-height: 3em;
 }
 
-form input{
+form input, form select{
   line-height: 2em;
   width: 90%;
 }
 
-input.login-text{
+input.login-text, select.login-text{
   text-indent: 2%;
+}
+
+select.login-text{
+  width: 92%;
+  height: 2.5em;
 }
 
 input.submit{
