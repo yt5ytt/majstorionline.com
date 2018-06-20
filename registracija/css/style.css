@@ -222,7 +222,7 @@ input.submit:hover{
 }
 
 .reg-body textarea{
-  width: 91%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1%;
@@ -233,15 +233,11 @@ input.submit:hover{
 }
 
 .reg-body select{
-  width: 91%;
+  width: 90%;
   line-height: 3em;
   text-indent: 1%;
   height: 2.5em;
 }
-
-/*.reg-body option{
-  line-height: 2em;
-}*/
 
 .conf-box{
   text-align: center;
@@ -266,4 +262,5 @@ input.submit:hover{
 .conf-box a.submit:hover{
   background-color:  rgba(218, 11, 11, 0.6);
   color: lightblue;
+  cursor: pointer;
 }
