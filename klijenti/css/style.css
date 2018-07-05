@@ -24,7 +24,7 @@
 
 nav{
   float: right;
-  width: 70%;
+  width: 100%;
   text-align: right;
 }
 
@@ -42,13 +42,11 @@ nav ul li a{
   display: inline-block;
   text-decoration: none;
   color: black;
-  /*text-transform: uppercase;*/
   font-weight: bolder;
-  width: 25%;
+  width: 15%;
 }
 
 nav ul li a:hover{
-  font-size: 1.05em;
   background-color: rgba(243, 248, 0, 1);
 }
 
@@ -73,88 +71,29 @@ nav ul li a:hover{
   margin: 1em 0;
 }
 
-#body .link-box{
-  display: block;
-  width: 19%;
-  float: left;
-  border: 5px solid rgba(243, 248, 0, 0);
-  background-color: rgba(243, 248, 0, 0);
-  overflow: hidden;
-}
-
-#body .link{
-  border: 5px solid black;
-  border-radius: 10px;
-  display: block;
-  height: 3em;
-  text-align: center;
-}
-
-#body .link a{
-  display: block;
-  text-decoration: none;
-  color: black;
-  text-align: center;
-  border-radius: 10px;
-  line-height: 1.5em;
-  height: 3em;
-  display: inline-block;
-  font-weight: bolder;
-}
-
-#body .link-box:hover{
-  border: 5px solid rgba(243, 248, 0, 1);
-  background-color: rgba(243, 248, 0, 1);
-  border-radius: 10px;
-}
-
-.body-box{
-  margin-top: 1%;
-}
-
-.link-box1{
-  display: block;
-  text-align: center;
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
-
-.link-box1 a{
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 1.2em;
-  width: 20%;
-  background-color: rgba(243, 248, 0, 1);
-  line-height: 2em;
-  display: inline-block;
-}
-
-.profile-box .sidebar{
+#body .sidebar{
   width: 20%;
   float: left;
 }
 
-.profile-box .sidebar ul{
+#body .sidebar ul{
   list-style-type: none;
 }
 
-.profile-box .sidebar ul li{
+#body .sidebar ul li{
   line-height: 2em;
-  border-top: 1px dotted grey;
   border-bottom: 1px dotted grey;
 }
 
-.profile-box .sidebar ul li:last-child{
-  border-top: none;
+#body .sidebar ul li:first-child{
+  border-top: 1px dotted grey;
 }
 
-.profile-box .sidebar ul li:hover{
+#body .sidebar ul li:hover{
   background-color: rgba(243, 248, 0, 1);
 }
 
-.profile-box .sidebar ul li a{
+#body .sidebar ul li a{
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -163,21 +102,38 @@ nav ul li a:hover{
   margin-left: 5px;
 }
 
-.profile-main{
-  width: 50%;
-  text-indent: 1%;
-  float: left;
-  border-left: 1px dotted grey;
-  border-right: 1px dotted grey;
-}
-
-.profile-main small{
-  font-size: 0.5em;
-}
-
-.profile-side{
-  width: 29%;
+#body .main-box{
+  width: 79%;
   float: right;
+  border-left: 1px dotted grey;
+}
+
+#body .majstor-box{
+  width: 98%;
+  margin: 1% auto;
+  border-bottom: 1px dotted grey;
+}
+
+#body .majstor-box:last-child{
+  border-bottom: none;
+}
+
+#body .naslov a{
+  text-decoration: none;
+  color: green;
+}
+
+#body .contact{
+  margin-top: 1%;
+  float: right;
+}
+
+#body .contact a{
+  padding: 10px;
+  background-color: rgba(243, 248, 0, 1);
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 footer{

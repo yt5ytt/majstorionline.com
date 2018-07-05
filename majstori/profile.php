@@ -14,7 +14,15 @@
         $rezProfil = $db -> query($upitProfil);
         while($objProfil = mysqli_fetch_object($rezProfil)){
           $ident = $objProfil -> ident;
-          $_SESSION["username"] = $objProfil -> username;
+          $username = $objProfil -> username;
+          $ime = $objProfil -> ime;
+          $prezime = $objProfil -> prezime;
+          $adresa = $objProfil -> adresa;
+          $grad = $objProfil -> grad;
+          $telefon = $objProfil -> telefon;
+          $opis = $objProfil -> opis;
+          $delatnost = $objProfil -> delatnost;
+          $dodatnaDelatnost = $objProfil -> dodatna_delatnost;
         }
       ?>
       <div class="top-line">
@@ -40,41 +48,27 @@
       </div>
 
       <div id="body">
-        <div class="wrapper">
-
-<?php
-        $upitGlavni = "select * from glavni_zanat order by zanat asc";
-        $rezGlavni = $db -> query($upitGlavni);
-        while($objGlavni = mysqli_fetch_object($rezGlavni)){
-          $zanatGlavni = $objGlavni -> zanat;
-?>
-            <div class="link-box">
-              <div class="link">
-                <a href="pretraga.php?zanat=<?php echo $zanatGlavni; ?>"><?php echo $zanatGlavni; ?></a>
-              </div>
-            </div>
-
-
-<?php
-
-        }
-
-        $upitPomocni = "select * from pomocni_zanat order by zanat asc";
-        $$rezPomocni = $db -> query($upitPomocni);
-        while($objPomocni = mysqli_fetch_object($$rezPomocni)){
-          $zanatPomocni = $objPomocni -> zanat;
-?>
-            <div class="link-box">
-              <div class="link">
-                <a href="pretraga.php?zanat=<?php echo $zanatPomocni; ?>"><?php echo $zanatPomocni; ?></a>
-              </div>
-            </div>
-
-
-<?php
-        }
-?>
+        <div class="profile-box wrapper">
+          <div class="sidebar">
+            <ul>
+              <li><a href="#">Izmeni profil</a></li>
+              <li><a href="#">Ukloni profil</a></li>
+            </ul>
+          </div>
+          <div class="profile-main">
+            <h1><?php echo $username; ?><small><?php echo "(" . $ident . ")"; ?></small></h1>
+            <h3><?php echo $ime . " " . $prezime . " - " . $delatnost; ?></h3>
+            <p><?php echo $email; ?></p>
+            <p><?php echo $adresa; ?></p>
+            <h3><?php echo $grad; ?></h3>
+            <h3><?php echo $telefon; ?></h3>
+          </div>
+          <div class="profile-side">
+            <p><?php echo $dodatnaDelatnost; ?></p>
+            <p><?php echo $opis; ?></p>
+          </div>
         </div>
+
       </div>
 
 <?php
