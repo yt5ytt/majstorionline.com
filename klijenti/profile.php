@@ -20,7 +20,7 @@
           $adresa = $objProfil -> adresa;
           $grad = $objProfil -> grad;
           $telefon1 = $objProfil -> telefon1;
-          $telefon2 = $objProfil -> telefon2
+          $telefon2 = $objProfil -> telefon2;
         }
       ?>
       <div class="top-line">
@@ -46,14 +46,15 @@
       </div>
 
       <div id="body">
-        <div class="profile-box wrapper">
+        <div class="body-box wrapper">
           <div class="sidebar">
             <ul>
+              <li><a href="index.php">Početak</a></li>
               <li><a href="#">Izmeni profil</a></li>
               <li><a href="#">Ukloni profil</a></li>
             </ul>
           </div>
-          <div class="profile-main">
+          <div class="main-box">
             <h1><?php echo $username; ?><small><?php echo "(" . $ident . ")"; ?></small></h1>
             <h3><?php echo $ime . " " . $prezime; ?></h3>
             <p><?php echo $email; ?></p>
