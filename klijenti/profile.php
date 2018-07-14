@@ -55,20 +55,22 @@
             </ul>
           </div>
           <div class="main-box">
-            <h1><?php echo $username; ?><small><?php echo "(" . $ident . ")"; ?></small></h1>
-            <h3><?php echo $ime . " " . $prezime; ?></h3>
-            <p><?php echo $email; ?></p>
-            <p><?php echo $adresa; ?></p>
-            <h3><?php echo $grad; ?></h3>
-            <h3><?php echo $telefon1; ?></h3>
+            <div class="profile-box">
+              <h1><?php echo $username; ?><small><?php echo "(" . $ident . ")"; ?></small></h1>
+              <h3><?php echo $ime . " " . $prezime; ?></h3>
+              <p><?php echo $email; ?></p>
+              <p><?php echo $adresa; ?></p>
+              <h3><?php echo $grad; ?></h3>
+              <h3><?php echo $telefon1; ?></h3>
 <?php
-            if($telefon2 != ""){
+              if($telefon2 != ""){
 ?>
-            <h3><?php echo $telefon2; ?></h3>
+              <h3><?php echo $telefon2; ?></h3>
 
 <?php
-            }
+              }
 ?>
+            </div>
           </div>
         </div>
 

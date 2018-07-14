@@ -86,19 +86,18 @@ nav ul li a:hover{
   border: 5px solid black;
   border-radius: 10px;
   display: block;
-  height: 3em;
   text-align: center;
 }
 
 #body .link a{
-  display: block;
+  vertical-align: middle;
   text-decoration: none;
   color: black;
   text-align: center;
   border-radius: 10px;
   line-height: 1.5em;
+  display: block;
   height: 3em;
-  display: inline-block;
   font-weight: bolder;
 }
 

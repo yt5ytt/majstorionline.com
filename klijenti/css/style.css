@@ -108,6 +108,11 @@ nav ul li a:hover{
   border-left: 1px dotted grey;
 }
 
+#body .profile-box{
+  width: 99%;
+  margin: 0 auto;
+}
+
 #body .majstor-box{
   width: 98%;
   margin: 1% auto;
