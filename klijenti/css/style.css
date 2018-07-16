@@ -141,6 +141,50 @@ nav ul li a:hover{
   font-weight: bolder;
 }
 
+#body form{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#body section.row{
+  overflow: hidden;
+  line-height: 3em;
+  width: 100%;
+}
+
+#body section.row label{
+  float: left;
+  width: 30%;
+  text-align: right;
+}
+
+#body section.row input, #body section.row select{
+  width: 50%;
+  float: right;
+}
+
+#body section button{
+  width: 30%;
+  line-height: 3em;
+  color: black;
+  font-weight: bolder;
+  background-color: rgba(243, 248, 0, 1);
+  font-family: serif;
+}
+
+#body textarea{
+  height: 200px;
+  width: 50%;
+  float: right;
+  margin-bottom: 2%;
+}
+
+#body label.opis{
+  vertical-align: top;
+  line-height: 1em;
+}
+
 footer{
   background-color: rgba(243, 248, 0, 1);
   border-top: 5px solid rgba(243, 248, 0, 1);
