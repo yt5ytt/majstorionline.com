@@ -15,6 +15,7 @@
 #main{
   width: 100%;
   position: relative;
+  background-color: black;
 }
 
 .top-line{
@@ -41,7 +42,7 @@ nav ul li{
 nav ul li a{
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: white;
   /*text-transform: uppercase;*/
   font-weight: bolder;
   width: 25%;
@@ -50,6 +51,7 @@ nav ul li a{
 nav ul li a:hover{
   font-size: 1.05em;
   background-color: rgba(243, 248, 0, 1);
+  color: black;
 }
 
 .top-banner{
@@ -75,30 +77,42 @@ nav ul li a:hover{
 
 #body .link-box{
   display: block;
-  width: 19%;
+  width: 18%;
   float: left;
-  border: 5px solid rgba(243, 248, 0, 0);
-  background-color: rgba(243, 248, 0, 0);
+  border: 5px solid rgba(243, 248, 0, 1);
+  /*background-color: rgba(243, 248, 0, 1);*/
   overflow: hidden;
+  border-radius: 10px;
+  margin: 0.5%;
 }
 
 #body .link{
   border: 5px solid black;
+  /*background-color: white;*/
   border-radius: 10px;
-  display: block;
+  /*display: block;*/
   text-align: center;
 }
 
 #body .link a{
   vertical-align: middle;
   text-decoration: none;
-  color: black;
+  color: white;
   text-align: center;
   border-radius: 10px;
   line-height: 1.5em;
   display: block;
   height: 3em;
   font-weight: bolder;
+}
+
+#body .link a:hover{
+  color: black;
+}
+
+#body .link:hover{
+  background-color: rgba(243, 248, 0, 1);
+  color: black;
 }
 
 #body .link-box:hover{
@@ -141,12 +155,12 @@ nav ul li a:hover{
 
 .profile-box .sidebar ul li{
   line-height: 2em;
-  border-top: 1px dotted grey;
-  border-bottom: 1px dotted grey;
+  border-top: 1px dotted white;
+
 }
 
 .profile-box .sidebar ul li:last-child{
-  border-top: none;
+  border-bottom: 1px dotted white;
 }
 
 .profile-box .sidebar ul li:hover{
@@ -154,12 +168,16 @@ nav ul li a:hover{
 }
 
 .profile-box .sidebar ul li a{
-  color: black;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bolder;
   display: block;
   margin-left: 5px;
+}
+
+.profile-box .sidebar ul li a:hover{
+  color: black;
 }
 
 .profile-main{
@@ -168,6 +186,7 @@ nav ul li a:hover{
   float: left;
   border-left: 1px dotted grey;
   border-right: 1px dotted grey;
+  color: white;
 }
 
 .profile-main small{
@@ -177,6 +196,7 @@ nav ul li a:hover{
 .profile-side{
   width: 29%;
   float: right;
+  color: white;
 }
 
 footer{
