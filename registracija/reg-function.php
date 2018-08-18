@@ -110,8 +110,16 @@
                   $sql_upit = "insert into klijenti (ident, email, password, username, ime, prezime, adresa, grad, telefon1, telefon2) values ('$ident', '$email', '$password', '$username', '$ime', '$prezime', '$adresa', '$grad', '$telefon1', '$telefon2')";
                   $upis = $db -> query($sql_upit);
 
+                  $addTabela = "create table inbox_$ident
+                  (id int(5) not null auto_increment primary key,
+                  vreme timestamp,
+                  posiljalac varchar(20) not null,
+                  primala varchar(20) not null,
+                  poruka text,
+                  status int(1) not null default 0)";
+                  $createTabela = $db -> query($addTabela);
 
-                    if($upis){
+                    if($upis AND $createTabela){
 
                     ?>
                       <div class="conf-box">
@@ -213,8 +221,16 @@
                   $sql_upit = "insert into majstori (ident, email, password, username, ime, prezime, adresa, grad, telefon, opis, delatnost) values ('$ident', '$email', '$password', '$username', '$ime', '$prezime', '$adresa', '$grad', '$telefon', '$opis', '$delatnost')";
                   $upis = $db -> query($sql_upit);
 
+                  $addTabela = "create table inbox_$ident
+                  (id int(5) not null auto_increment primary key,
+                  vreme timestamp,
+                  posiljalac varchar(20) not null,
+                  primala varchar(20) not null,
+                  poruka text,
+                  status int(1) not null default 0)";
+                  $createTabela = $db -> query($addTabela);
 
-                    if($upis){
+                    if($upis AND $addTabela){
 
                     ?>
                       <div class="conf-box">

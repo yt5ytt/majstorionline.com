@@ -52,7 +52,7 @@
 
           <div class="main-box">
 
-            <form action="oglasFunction.php" method="post">
+            <form action="oglasFunction.php" method="post" enctype="multipart/form-data">
               <section class="row">
                 <label for="zanat">POTREBAN</label>
                 <select name="zanat">
@@ -98,7 +98,7 @@
               </section>
 
               <section class="row">
-                <label for="trecaSLika">SLIKA 3</label>
+                <label for="trecaSlika">SLIKA 3</label>
                 <input type="file" name="slika3">
               </section>
 

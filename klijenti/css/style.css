@@ -115,6 +115,14 @@ nav ul li a:hover{
   color: white;
 }
 
+#body .main-box h2.oglas{
+  color: rgba(243, 248, 0, 1);
+  width: 100%;
+  margin: 15% 0;
+  text-align: center;
+  font-size: 2em;
+}
+
 #body .profile-box{
   width: 99%;
   margin: 0 auto;
