@@ -107,7 +107,7 @@
 
                   //Ovde kod da registracija moze da se nastavi
 
-                  $sql_upit = "insert into klijenti (ident, email, password, username, ime, prezime, adresa, grad, telefon1, telefon2) values ('$ident', '$email', '$password', '$username', '$ime', '$prezime', '$adresa', '$grad', '$telefon1', '$telefon2')";
+                  $sql_upit = "insert into klijenti (ident, email, password, username, ime, prezime) values ('$ident', '$email', '$password', '$username', '$ime', '$prezime')";
                   $upis = $db -> query($sql_upit);
 
                   $addTabela = "create table inbox_$ident
@@ -218,7 +218,7 @@
 
                   //Ovde kod da registracija moze da se nastavi
 
-                  $sql_upit = "insert into majstori (ident, email, password, username, ime, prezime, adresa, grad, telefon, opis, delatnost) values ('$ident', '$email', '$password', '$username', '$ime', '$prezime', '$adresa', '$grad', '$telefon', '$opis', '$delatnost')";
+                  $sql_upit = "insert into majstori (ident, email, password, username, ime, prezime, opis, delatnost) values ('$ident', '$email', '$password', '$username', '$ime', '$prezime', '$opis', '$delatnost')";
                   $upis = $db -> query($sql_upit);
 
                   $addTabela = "create table inbox_$ident
