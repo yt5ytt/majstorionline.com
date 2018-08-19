@@ -3,6 +3,7 @@
   include("header.php");
   $email = $_SESSION["email"];
   include("../db/db_connect.php");
+  include("../function.php");
 ?>
 
     <title>Majstori - Početna</title>
@@ -36,6 +37,28 @@
 
     <div class="body-box wrapper">
       <h2>Pretraga po kategoriji <?php echo $zanat; ?></h2>
+    </div>
+
+    <div class="pretraga-main wrapper">
+<?php
+      $upit = "select * from oglasi where zanat='$zanat' order by vreme desc";
+      $rez = $db -> query($upit);
+      while($obj = mysqli_fetch_object($rez)) {
+        $tempTime = $obj -> vreme;
+
+        echo vreme($tempTime) . "<br />";
+
+        /*$tempDate = explode(" ", $tempTime);
+        $tempDatum = $tempDate[0];
+        $tempVreme = $tempDate[1];*/
+
+
+        //echo $datum;
+
+        //echo $dan. "." . $mesec . "." . $godina. ". " . $sat . ":" . $minut . "<br />";
+
+      }
+ ?>
     </div>
 
     <div class="link-box1 wrapper">

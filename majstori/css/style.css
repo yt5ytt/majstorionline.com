@@ -125,6 +125,16 @@ nav ul li a:hover{
   margin-top: 1%;
 }
 
+.body-box h2{
+  color: rgba(243, 248, 0, 1);
+}
+
+.pretraga-main{
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
 .link-box1{
   display: block;
   text-align: center;
@@ -156,7 +166,6 @@ nav ul li a:hover{
 .profile-box .sidebar ul li{
   line-height: 2em;
   border-top: 1px dotted white;
-
 }
 
 .profile-box .sidebar ul li:last-child{
