@@ -49,7 +49,7 @@
 
       <div id="body">
         <div class="profile-box wrapper">
-          <div class="sidebar">
+          <div id="sidebar">
             <ul>
               <li><a href="index.php">Početak</a></li>
               <li><a href="#">Izmeni profil</a></li>

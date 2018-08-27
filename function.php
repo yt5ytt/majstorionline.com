@@ -1,21 +1,21 @@
 <?php
-  function vreme($tempTime){
-
-    $tempDate = explode(" ", $tempTime);
-    $tempDatum = $tempDate[0];
-    $tempVreme = $tempDate[1];
-
-    $date = explode("-", $tempDatum);
-    $dan = $date[2];
-    $mesec = $date[1];
-    $godina = $date[0];
+  function vreme($tempVreme){
 
     $time = explode(":", $tempVreme);
     $sat = $time[0];
     $minut = $time[1];
 
-    $vreme = $dan . "." . $mesec . "." . $godina . ". " . $sat . ":" . $minut;
+    $vreme = $sat . ":" . $minut;
     return $vreme;
+  }
 
+  function datum($tempDatum){
+    $date = explode("-", $tempDatum);
+    $dan = $date[2];
+    $mesec = $date[1];
+    $godina = $date[0];
+    
+    $datum = $dan . "." . $mesec . "." . $godina . ".";
+    return $datum;
   }
  ?>

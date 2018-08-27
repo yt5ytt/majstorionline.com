@@ -133,6 +133,7 @@ nav ul li a:hover{
   color: white;
   margin-top: 2%;
   margin-bottom: 2%;
+  overflow: hidden;
 }
 
 .link-box1{
@@ -154,29 +155,29 @@ nav ul li a:hover{
   display: inline-block;
 }
 
-.profile-box .sidebar{
+#sidebar{
   width: 20%;
   float: left;
 }
 
-.profile-box .sidebar ul{
+#sidebar ul{
   list-style-type: none;
 }
 
-.profile-box .sidebar ul li{
+#sidebar ul li{
   line-height: 2em;
   border-top: 1px dotted white;
 }
 
-.profile-box .sidebar ul li:last-child{
+#sidebar ul li:last-child{
   border-bottom: 1px dotted white;
 }
 
-.profile-box .sidebar ul li:hover{
+#sidebar ul li:hover{
   background-color: rgba(243, 248, 0, 1);
 }
 
-.profile-box .sidebar ul li a{
+#sidebar ul li a{
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -185,8 +186,90 @@ nav ul li a:hover{
   margin-left: 5px;
 }
 
-.profile-box .sidebar ul li a:hover{
+#sidebar ul li a:hover{
   color: black;
+}
+
+#oglasi{
+  width: 80%;
+  float: right;
+  border-left: 1px dotted gray;
+  overflow: hidden;
+  padding-left: 1%;
+}
+
+#oglasi h2{
+  color: rgba(243, 248, 0, 1);
+}
+
+#oglasi a{
+  text-decoration: none;
+  color: white;
+}
+
+#oglasi a .oglas{
+  border-top: 1px dotted grey;
+}
+
+#oglasi a .oglas:last-child{
+  border-bottom: 1px dotted grey;
+}
+
+#oglasi .oglas{
+  width: 100%;
+  margin: 2% auto;
+  padding: 1% 0;
+}
+
+#oglasi .oglas h2{
+  color: white;
+}
+
+#oglasi .oglas h2:hover{
+  text-decoration: underline;
+}
+
+#oglasi a:hover > .oglas h2{
+  color: rgba(243, 248, 0, 1);
+}
+
+#oglasi .oglas em.more{
+  color: rgba(243, 248, 0, 1);
+}
+
+#oglasi .oglas em.more:hover{
+  text-decoration: underline;
+}
+
+#oglasi .jedanoglas{
+  margin: 2% 0;
+}
+
+#oglasi .jedanoglas h2{
+  color: white;
+}
+
+#oglasi .ponudi{
+  display: block;
+  float: right;
+  width: 20%;
+  text-align: center;
+}
+
+#oglasi .ponudi a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /*font-size: 1.2em;*/
+  width: 100%;
+  background-color: rgba(243, 248, 0, 1);
+  line-height: 3em;
+  display: inline-block;
+}
+
+#oglasi .oglasavac{
+  margin: 5px 0;
 }
 
 .profile-main{
