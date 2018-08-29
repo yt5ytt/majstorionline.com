@@ -82,9 +82,9 @@
             <div class="oglas-opis">
               <p>
                 <?php
-                  $uzorak = substr($obj -> opis, 0 ,60);
+                  $uzorak = substr($obj -> opis, 0 ,250);
                   $brojSlova = strlen($opis);
-                  if(60 < $brojSlova){
+                  if(250 < $brojSlova){
                     $deo = $uzorak . " ... <em class='more'>dalje</em>";
                     echo $deo;
                   }else{
@@ -150,41 +150,59 @@
               <div class="container">
 
                <!-- Full-width images with number text -->
+            <?php if(@$slika1){ ?>
                <div class="mySlides">
                  <div class="numbertext">1 / 3</div>
                    <img src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika1; ?>" style="width:100%">
                </div>
+            <?php } ?>
+
+            <?php if(@$slika2){ ?>
 
                <div class="mySlides">
                  <div class="numbertext">2 / 3</div>
                    <img src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika2; ?>" style="width:100%">
                </div>
+            <?php } ?>
+
+            <?php if(@$slika3){ ?>
 
                <div class="mySlides">
                  <div class="numbertext">3 / 3</div>
                    <img src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika3; ?>" style="width:100%">
                </div>
+            <?php } ?>
 
                <!-- Next and previous buttons -->
+            <?php if(@$slika1 OR @$slika2 OR @$slika3){ ?>
                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <?php } ?>
 
                <!-- Image text -->
+            <?php if(@$slika1 OR @$slika2 OR @$slika3){ ?>
                <div class="caption-container">
                  <p id="caption"></p>
                </div>
+            <?php } ?>
 
                <!-- Thumbnail images -->
                <div class="row">
+            <?php if(@$slika1){ ?>
                  <div class="column">
                    <img class="demo cursor" src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika1; ?>" style="width:100%" onclick="currentSlide(1)" alt="POTREBAN <?php echo $zanat; ?>">
                  </div>
+            <?php } ?>
+            <?php if(@$slika2){ ?>
                  <div class="column">
                    <img class="demo cursor" src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika2; ?>" style="width:100%" onclick="currentSlide(2)" alt="POTREBAN <?php echo $zanat; ?>">
                  </div>
+            <?php } ?>
+            <?php if(@$slika3){ ?>
                  <div class="column">
                    <img class="demo cursor" src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika3; ?>" style="width:100%" onclick="currentSlide(3)" alt="POTREBAN <?php echo $zanat; ?>">
                  </div>
+            <?php } ?>
                </div>
               </div>
 
