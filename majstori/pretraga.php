@@ -48,7 +48,7 @@
         <h2>Pretraga po kategoriji <?php echo $zanat; ?></h2>
 
         <?php
-          if($_GET["zanat"]){
+          if(@$_GET["zanat"]){
 
             $upit = "select * from oglasi where zanat='$zanat' order by vreme desc";
             $rez = $db -> query($upit);
