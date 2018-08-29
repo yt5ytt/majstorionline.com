@@ -129,7 +129,7 @@
         ?>
           <div class="jedanoglas">
             <div class="ponudi">
-              <a class="submit" href="ponuda.php?identOglasa=<?php echo $identOglasa; ?>">Ponudi posao</a>
+              <a class="submit" href="ponuda.php?identOglasa=<?php echo $identOglasa; ?>">Ponudi uslugu</a>
             </div>
             <div class="oglas-naslov">
               <h2>POTREBAN <?php echo $zanat; ?></h2>

@@ -272,6 +272,37 @@ nav ul li a:hover{
   margin: 5px 0;
 }
 
+#oglasi .ponudaPosao{
+  width: 100%;
+  text-align: center;
+}
+
+#oglasi .ponudaPosao h3{
+  width: 100%;
+  margin: 2% 0;
+  text-align: justify;
+}
+
+#oglasi .ponudaPosao textarea{
+  width: 100%;
+  height: 20em;
+  margin-bottom: 2%;
+  font-size: 1.5em;
+}
+
+#oglasi button{
+  width: 30%;
+  line-height: 3em;
+  color: black;
+  font-weight: bolder;
+  background-color: rgba(243, 248, 0, 1);
+  font-family: serif;
+}
+
+#oglasi button:hover{
+  cursor: pointer;
+}
+
 .profile-main{
   width: 50%;
   text-indent: 1%;
