@@ -68,6 +68,74 @@ nav ul li a:hover{
   font-size: .5em;
 }
 
+#main .postavljeni{
+  width: 100%;
+  margin-top: 2%;
+}
+
+#main .postavljeni h1{
+  text-indent: 1%;
+  text-decoration: underline;
+  color: rgba(243, 248, 0, 1);
+}
+
+#main .postavljeni .row{
+  border-top: 1px dotted grey;
+  /*border-bottom: 1px dotted grey;*/
+  margin: 1% auto;
+  padding-top: 1%;
+  width: 98%;
+}
+
+#main .postavljeni .row:last-child{
+  border-bottom: 1px dotted grey;
+  padding-bottom: 1%;
+  margin-bottom: 0;
+}
+
+#main .postavljeni .row a{
+  color: white;
+  text-decoration: none;
+}
+
+#oglasi a{
+  text-decoration: none;
+  color: white;
+}
+
+#oglasi a .oglas{
+  border-top: 1px dotted grey;
+}
+
+#oglasi a .oglas:last-child{
+  border-bottom: 1px dotted grey;
+}
+
+#main .postavljeni .oglas{
+  width: 100%;
+  padding: 1% 0;
+}
+
+#main .postavljeni .oglas h2{
+  color: white;
+}
+
+#main .postavljeni .oglas h2:hover{
+  text-decoration: underline;
+}
+
+#main .postavljeni a:hover > .oglas h2{
+  color: rgba(243, 248, 0, 1);
+}
+
+#main .postavljeni .oglas em.more{
+  color: rgba(243, 248, 0, 1);
+}
+
+#main .postavljeni .oglas em.more:hover{
+  text-decoration: underline;
+}
+
 #body{
   overflow: hidden;
   margin: 1em 0;

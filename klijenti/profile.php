@@ -3,6 +3,7 @@
   include("header.php");
   $email = $_SESSION["email"];
   include("../db/db_connect.php");
+  include("../function.php");
 ?>
 
     <title>Klijent Profil</title>
@@ -59,22 +60,68 @@
               <h1><?php echo $username; ?><small><?php echo "(" . $ident . ")"; ?></small></h1>
               <h3><?php echo $ime . " " . $prezime; ?></h3>
               <p><?php echo $email; ?></p>
-              <p><?php echo $adresa; ?></p>
-              <h3><?php echo $grad; ?></h3>
-              <h3><?php echo $telefon1; ?></h3>
-<?php
-              if($telefon2 != ""){
-?>
-              <h3><?php echo $telefon2; ?></h3>
-
-<?php
-              }
-?>
             </div>
+
+            <div class="postavljeni">
+
+              <h1>Postavljeni oglasi</h1>
+
+              <?php
+                $upit = "select * from oglasi where klijent='$ident' order by vreme desc";
+                $rez = $db -> query($upit);
+                while($obj = mysqli_fetch_object($rez)){
+                  $tempTime = $obj -> vreme;
+                  $tempDate = explode(" ", $tempTime);
+                  $tempDatum = $tempDate[0];
+                  $tempVreme = $tempDate[1];
+                  $datum = datum($tempDatum);
+                  $vreme = vreme($tempVreme);
+                  $zanat = $obj -> zanat;
+                  $identOglasa = $obj -> identoglasa;
+                  $opis = nl2br($obj -> opis);
+                  $slika1 = $obj -> slika1;
+                  $slika2 = $obj -> slika2;
+                  $slika3 = $obj -> slika3;
+
+              ?>
+              <div class="row">
+                <a href="profile.php?identOglasa=<?php echo $identOglasa; ?>">
+                  <div class="oglas">
+                    <div class="oglas-naslov">
+                      <h2>POTREBAN <?php echo $zanat; ?></h2>
+                      <small class="vreme"><i>Postavljeno: <?php echo $datum . " " . $vreme; ?></i></small>
+                    </div>
+                    <div class="oglas-opis">
+                      <p>
+                        <?php
+                          $uzorak = substr($obj -> opis, 0 ,150);
+                          $brojSlova = strlen($opis);
+                          if(150 < $brojSlova){
+                            $deo = $uzorak . " ... <em class='more'>dalje</em>";
+                            echo $deo;
+                          }else{
+                            echo $uzorak;
+                          }
+                        ?>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+
+              <?php
+                }
+              ?>
+
+            </div>
+
           </div>
         </div>
 
       </div>
+
+
 
 <?php
   include("footer.php");

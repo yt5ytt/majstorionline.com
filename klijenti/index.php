@@ -71,7 +71,7 @@
               </div>
               <h3 class="naslov"><a href="#"><?php echo $ime . " " . $prezime; ?></a></h3><br />
               <h2><?php echo $delatnost; ?></h2><br />
-              <p><?php echo "Lokacija: <b>" . $grad . "</b> | " . $adresa . " | " . $telefon . " | " . $mail; ?></p><br />
+              <p><?php echo "Mail adresa: <b>" . $mail . "</b>"; ?></p><br />
               <p><?php echo nl2br($opis); ?></p><br />
 <?php
               if($dodatnaDelatnost != ""){
