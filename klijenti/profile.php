@@ -64,6 +64,115 @@
 
             <div class="postavljeni">
 
+            <?php
+              if(@$_GET["identOglasa"]){
+                $identOglasa = $_GET["identOglasa"];
+                $upit = "select * from oglasi where identOglasa='$identOglasa' limit 1";
+                $rez = $db -> query($upit);
+                $obj = mysqli_fetch_object($rez);
+                $tempTime = $obj -> vreme;
+                $tempDate = explode(" ", $tempTime);
+                $tempDatum = $tempDate[0];
+                $tempVreme = $tempDate[1];
+                $datum = datum($tempDatum);
+                $vreme = vreme($tempVreme);
+                $zanat = $obj -> zanat;
+                $identOglasa = $obj -> identoglasa;
+                $opis = nl2br($obj -> opis);
+                $slika1 = $obj -> slika1;
+                $slika2 = $obj -> slika2;
+                $slika3 = $obj -> slika3;
+                $klijent = $obj -> klijent;
+
+                $upitKlijent = "select * from klijenti where ident='$klijent' limit 1";
+                $rezKlijent = $db -> query($upitKlijent);
+                $objKlijent = mysqli_fetch_object($rezKlijent);
+                  $ime = $objKlijent -> ime;
+                  $prezime = $objKlijent -> prezime;
+            ?>
+              <div class="jedanoglas">
+                <div class="ponudi">
+                  <a class="submit" href="ponuda.php?identOglasa=<?php echo $identOglasa; ?>">Ponudi uslugu</a>
+                </div>
+                <div class="oglas-naslov">
+                  <h2>POTREBAN <?php echo $zanat; ?></h2>
+                  <small class="vreme"><i>Postavljeno: <?php echo $datum . " " . $vreme; ?></i></small>
+                </div>
+                <div class="oglas-opis">
+                  <p>
+                    <?php echo $opis; ?>
+                  </p>
+                </div>
+
+                <div class="oglas-slike">
+
+                  <!-- Container for the image gallery -->
+                  <div class="container">
+
+                   <!-- Full-width images with number text -->
+                <?php if(@$slika1){ ?>
+                   <div class="mySlides">
+                     <div class="numbertext">1 / 3</div>
+                       <img src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika1; ?>" style="width:100%">
+                   </div>
+                <?php } ?>
+
+                <?php if(@$slika2){ ?>
+
+                   <div class="mySlides">
+                     <div class="numbertext">2 / 3</div>
+                       <img src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika2; ?>" style="width:100%">
+                   </div>
+                <?php } ?>
+
+                <?php if(@$slika3){ ?>
+
+                   <div class="mySlides">
+                     <div class="numbertext">3 / 3</div>
+                       <img src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika3; ?>" style="width:100%">
+                   </div>
+                <?php } ?>
+
+                   <!-- Next and previous buttons -->
+                <?php if(@$slika1 OR @$slika2 OR @$slika3){ ?>
+                   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <?php } ?>
+
+                   <!-- Image text -->
+                <?php if(@$slika1 OR @$slika2 OR @$slika3){ ?>
+                   <div class="caption-container">
+                     <p id="caption"></p>
+                   </div>
+                <?php } ?>
+
+                   <!-- Thumbnail images -->
+                   <div class="row">
+                <?php if(@$slika1){ ?>
+                     <div class="column">
+                       <img class="demo cursor" src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika1; ?>" style="width:100%" onclick="currentSlide(1)" alt="POTREBAN <?php echo $zanat; ?>">
+                     </div>
+                <?php } ?>
+                <?php if(@$slika2){ ?>
+                     <div class="column">
+                       <img class="demo cursor" src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika2; ?>" style="width:100%" onclick="currentSlide(2)" alt="POTREBAN <?php echo $zanat; ?>">
+                     </div>
+                <?php } ?>
+                <?php if(@$slika3){ ?>
+                     <div class="column">
+                       <img class="demo cursor" src="../img/slikeOglasa/<?php echo $identOglasa; ?>/<?php echo $slika3; ?>" style="width:100%" onclick="currentSlide(3)" alt="POTREBAN <?php echo $zanat; ?>">
+                     </div>
+                <?php } ?>
+                   </div>
+                  </div>
+
+               </div><!--kraj diva oglas-slike-->
+             </div><!--kraj diva .jedanoglas-->
+             <?php
+              }else{
+
+            ?>
+
               <h1>Postavljeni oglasi</h1>
 
               <?php
@@ -111,10 +220,12 @@
 
 
               <?php
+              }
                 }
               ?>
 
-            </div>
+            </div><!--kraj diva .postavljeni-->
+
 
           </div>
         </div>

@@ -207,7 +207,7 @@
               </div>
 
            </div><!--kraj diva oglas-slike-->
-          </div>
+         </div><!--kraj diva .jedanoglas-->
         <?php
           }
 

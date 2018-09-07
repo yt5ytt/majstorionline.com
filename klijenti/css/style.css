@@ -136,6 +136,38 @@ nav ul li a:hover{
   text-decoration: underline;
 }
 
+#main .postavljeni .jedanoglas{
+  margin: 2% auto;
+  width: 98%;
+}
+
+#main .postavljeni .jedanoglas h2{
+  color: white;
+}
+
+#main .postavljeni .ponudi{
+  display: block;
+  float: right;
+  width: 20%;
+  text-align: center;
+}
+
+#main .postavljeni .ponudi a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /*font-size: 1.2em;*/
+  width: 100%;
+  background-color: rgba(243, 248, 0, 1);
+  line-height: 3em;
+  display: inline-block;
+}
+
+#main .postavljeni .oglas-opis{
+  margin: 2% 0;
+}
+
 #body{
   overflow: hidden;
   margin: 1em 0;
