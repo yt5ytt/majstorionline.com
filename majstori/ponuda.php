@@ -53,19 +53,37 @@
         $obj = mysqli_fetch_object($rez);
 
         $identMajstora = $obj -> ident;
+        $ime = $obj -> ime;
+        $prezime = $obj -> prezime;
+        $majstor = $ime . " " . $prezime;
+        $server = $_SERVER['HTTP_HOST'];
+        $identKlijenta = $_POST["klijent"];
         $identOglasa = $_POST["identOglasa"];
         $ponuda = $_POST["ponudaPosao"];
+        $tabela = "inbox_" . $identKlijenta;
+        $poruka = "Majstor $majstor se javio na vaš oglas. Ponudu možete pogledati ... <a href=\"$server/klijenti/profile.php?identOglasa=$identOglasa\">OVDE</a>";
 
-        $upis = $db -> query("insert into $identOglasa (majstor, ponuda) values ('$identMajstora', '$ponuda')");
+        echo $server;
 
-        if($upis){
-          echo "Upisano!!!";
+        /*$upis = $db -> query("insert into $identOglasa (majstor, ponuda) values ('$identMajstora', '$ponuda')");*/
+
+        /*$slanjePoruke = $db -> query("insert into $tabela (korespondent, posiljalac, primalac, poruka) values ('$identMajstora', '$identMajstora', '$identKlijenta', '$poruka')");
+
+        if($upis & $slanjePoruke){
+
+          echo "Upisano!!! <br />";
+
         }else{
           echo "Nije upisano!!!";
-        }
+        }*/
 
       }elseif($_GET["identOglasa"]){
         $identOglasa = $_GET["identOglasa"];
+
+        $upitKlijent = "select klijent from oglasi where identoglasa='$identOglasa'";
+        $rezKlijent = $db -> query($upitKlijent);
+        $objKlijent = mysqli_fetch_object($rezKlijent);
+        $klijent = $objKlijent -> klijent;
  ?>
         <h2>Ponudi uslugu</h2>
         <form class="ponudaPosao" action="ponuda.php" method="post">
@@ -76,6 +94,7 @@
           <textarea name="ponudaPosao" required></textarea>
 
           <input type="hidden" name="identOglasa" value="<?php echo $identOglasa; ?>">
+          <input type="hidden" name="klijent" value="<?php echo $klijent; ?>">
 
           <button type="submit" name="submit">PONUDI USLUGU</button>
         </form>
