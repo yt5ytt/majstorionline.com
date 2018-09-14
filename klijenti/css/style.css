@@ -79,7 +79,7 @@ nav ul li a:hover{
   color: rgba(243, 248, 0, 1);
 }
 
-#main .postavljeni .row{
+#main .postavljeni .red{
   border-top: 1px dotted grey;
   /*border-bottom: 1px dotted grey;*/
   margin: 1% auto;
@@ -87,13 +87,13 @@ nav ul li a:hover{
   width: 98%;
 }
 
-#main .postavljeni .row:last-child{
+#main .postavljeni .red:last-child{
   border-bottom: 1px dotted grey;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
 
-#main .postavljeni .row a{
+#main .postavljeni .red a{
   color: white;
   text-decoration: none;
 }
@@ -137,35 +137,48 @@ nav ul li a:hover{
 }
 
 #main .postavljeni .jedanoglas{
-  margin: 2% auto;
-  width: 98%;
+  /*margin: 2% 0 2% 0;*/
+  margin: 2% 0 2% 2%;
+  width: 70%;
+  float: left;
 }
 
 #main .postavljeni .jedanoglas h2{
   color: white;
 }
 
-#main .postavljeni .ponudi{
-  display: block;
-  float: right;
-  width: 20%;
-  text-align: center;
+#main .postavljeni .oglas-opis{
+  margin: 5% 0;
 }
 
-#main .postavljeni .ponudi a{
-  text-decoration: none;
-  color: black;
+#main .postavljeni .dugmici{
+  width: 28%;
+  float: right;
+}
+
+#main .dugmici ul{
+  list-style-type: none;
+
+}
+
+#main .dugmici li{
+  line-height: 2.5em;
+  text-align: center;
+  width: 80%;
+  margin: 3% auto;
   font-weight: bolder;
   text-transform: uppercase;
-  /*font-size: 1.2em;*/
-  width: 100%;
-  background-color: rgba(243, 248, 0, 1);
-  line-height: 3em;
-  display: inline-block;
 }
 
-#main .postavljeni .oglas-opis{
-  margin: 2% 0;
+#main .dugmici li.status{
+  font-size: 1.2em;
+}
+
+#main .dugmici li a{
+  display: block;
+  background-color: rgba(243, 248, 0, 1);
+  color: black;
+  text-decoration: none;
 }
 
 #body{

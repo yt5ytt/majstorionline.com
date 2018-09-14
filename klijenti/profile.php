@@ -83,6 +83,7 @@
                 $slika2 = $obj -> slika2;
                 $slika3 = $obj -> slika3;
                 $klijent = $obj -> klijent;
+                $status = $obj -> status;
 
                 $upitKlijent = "select * from klijenti where ident='$klijent' limit 1";
                 $rezKlijent = $db -> query($upitKlijent);
@@ -91,9 +92,6 @@
                   $prezime = $objKlijent -> prezime;
             ?>
               <div class="jedanoglas">
-                <div class="ponudi">
-                  <a class="submit" href="ponuda.php?identOglasa=<?php echo $identOglasa; ?>">Ponudi uslugu</a>
-                </div>
                 <div class="oglas-naslov">
                   <h2>POTREBAN <?php echo $zanat; ?></h2>
                   <small class="vreme"><i>Postavljeno: <?php echo $datum . " " . $vreme; ?></i></small>
@@ -105,6 +103,10 @@
                 </div>
 
                 <div class="oglas-slike">
+
+                <?php
+                  if(@$slika1 or @$slika2 or @$slika3){
+                ?>
 
                   <!-- Container for the image gallery -->
                   <div class="container">
@@ -165,9 +167,48 @@
                 <?php } ?>
                    </div>
                   </div>
+                <?php
+                  }else{
+
+                    echo "<h2>Nema postavljenih slika!!!</h2>";
+
+                  }
+                ?>
 
                </div><!--kraj diva oglas-slike-->
+
              </div><!--kraj diva .jedanoglas-->
+
+             <div class="dugmici">
+              <ul>
+                <li class="status">
+                  <?php
+                    if(@$status == 1){
+                      ?>
+                        <p style="color: green;">A K T I V A N</p>
+                      <?php
+                    }elseif(@$status == 0){
+                      ?>
+                        <p style="color: red;">NEAKTIVAN</p>
+                      <?php
+                    }
+                  ?>
+                </li>
+                <?php
+                  if(@$status == 1){
+                    ?>
+                      <li><a href="oglasStatus.php?identOglasa=<?php echo $identOglasa; ?>&naredba=arhiviraj">Arhiviraj</a></li>
+                    <?php
+                  }elseif(@$status == 0){
+                    ?>
+                      <li><a href="oglasStatus.php?identOglasa=<?php echo $identOglasa; ?>&naredba=aktiviraj">Aktiviraj</a></li>
+                    <?php
+                  }
+                 ?>
+                <li><a href="oglasStatus.php?identOglasa=<?php echo $identOglasa; ?>&naredba=obrisi" style="color: red;">Obriši</a></li>
+              </ul>
+             </div>
+
              <?php
               }else{
 
@@ -193,7 +234,7 @@
                   $slika3 = $obj -> slika3;
 
               ?>
-              <div class="row">
+              <div class="red">
                 <a href="profile.php?identOglasa=<?php echo $identOglasa; ?>">
                   <div class="oglas">
                     <div class="oglas-naslov">

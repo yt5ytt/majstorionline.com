@@ -112,7 +112,7 @@
 
                   $addTabela = "create table inbox_$ident
                   (id int(5) not null auto_increment primary key,
-                  vreme timestamp,
+                  vreme timestamp not null default current_timestamp,
                   posiljalac varchar(20) not null,
                   primala varchar(20) not null,
                   poruka text,
@@ -223,7 +223,7 @@
 
                   $addTabela = "create table inbox_$ident
                   (id int(5) not null auto_increment primary key,
-                  vreme timestamp,
+                  vreme timestamp not null default current_timestamp,
                   posiljalac varchar(20) not null,
                   primala varchar(20) not null,
                   poruka text,

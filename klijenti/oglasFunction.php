@@ -96,7 +96,7 @@
 <?php
                     $addTabela = "create table $identOglasa
                     (id int(5) not null auto_increment primary key,
-                    vreme timestamp,
+                    vreme timestamp not null default current_timestamp,
                     majstor varchar(20) not null,
                     ponuda text)";
                     $createTabela = $db -> query($addTabela);
