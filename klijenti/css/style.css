@@ -136,8 +136,11 @@ nav ul li a:hover{
   text-decoration: underline;
 }
 
+#main .jedanoglas-box{
+  overflow: hidden;
+}
+
 #main .postavljeni .jedanoglas{
-  /*margin: 2% 0 2% 0;*/
   margin: 2% 0 2% 2%;
   width: 70%;
   float: left;
@@ -168,6 +171,24 @@ nav ul li a:hover{
   margin: 3% auto;
   font-weight: bolder;
   text-transform: uppercase;
+}
+
+#main .ponude{
+  width: 100%;
+  overflow: hidden;
+}
+
+#main .jedna-ponuda{
+  width: 90%;
+  margin: 3% auto;
+  overflow: hidden;
+  border-bottom: 1px dotted grey;
+  border-top: 1px dotted grey;
+}
+
+#main .ponude-box{
+  width: 70%;
+  float: left;
 }
 
 #main .dugmici li.status{

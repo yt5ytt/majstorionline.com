@@ -1,4 +1,7 @@
 <?php
+
+  include("../db/db_connect.php");
+
   function vreme($tempVreme){
 
     $time = explode(":", $tempVreme);
@@ -14,7 +17,7 @@
     $dan = $date[2];
     $mesec = $date[1];
     $godina = $date[0];
-    
+
     $datum = $dan . "." . $mesec . "." . $godina . ".";
     return $datum;
   }

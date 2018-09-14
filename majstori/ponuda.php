@@ -61,13 +61,11 @@
         $identOglasa = $_POST["identOglasa"];
         $ponuda = $_POST["ponudaPosao"];
         $tabela = "inbox_" . $identKlijenta;
-        $poruka = "Majstor $majstor se javio na vaš oglas. Ponudu možete pogledati ... <a href=\"$server/klijenti/profile.php?identOglasa=$identOglasa\">OVDE</a>";
+        $poruka = "Majstor $majstor se javio na vaš oglas. Ponudu možete pogledati ... <a href=\"http://$server/klijenti/profile.php?identOglasa=$identOglasa\">OVDE</a>";
 
-        echo $server;
+        $upis = $db -> query("insert into $identOglasa (majstor, ponuda) values ('$identMajstora', '$ponuda')");
 
-        /*$upis = $db -> query("insert into $identOglasa (majstor, ponuda) values ('$identMajstora', '$ponuda')");*/
-
-        /*$slanjePoruke = $db -> query("insert into $tabela (korespondent, posiljalac, primalac, poruka) values ('$identMajstora', '$identMajstora', '$identKlijenta', '$poruka')");
+        $slanjePoruke = $db -> query("insert into $tabela (korespondent, posiljalac, primalac, poruka) values ('$identMajstora', '$identMajstora', '$identKlijenta', '$poruka')");
 
         if($upis & $slanjePoruke){
 
@@ -75,7 +73,7 @@
 
         }else{
           echo "Nije upisano!!!";
-        }*/
+        }
 
       }elseif($_GET["identOglasa"]){
         $identOglasa = $_GET["identOglasa"];

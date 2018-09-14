@@ -91,6 +91,7 @@
                   $ime = $objKlijent -> ime;
                   $prezime = $objKlijent -> prezime;
             ?>
+            <div class="jedanoglas-box">
               <div class="jedanoglas">
                 <div class="oglas-naslov">
                   <h2>POTREBAN <?php echo $zanat; ?></h2>
@@ -208,6 +209,53 @@
                 <li><a href="oglasStatus.php?identOglasa=<?php echo $identOglasa; ?>&naredba=obrisi" style="color: red;">Obriši</a></li>
               </ul>
              </div>
+           </div><!--kraj diva jedanoglas-box-->
+
+             <div class="ponude">
+
+               <?php
+                $upitOglas = "select * from $identOglasa order by vreme desc";
+                $rezOglas = $db -> query($upitOglas);
+                while($objOglas = mysqli_fetch_object($rezOglas)){
+                  $majstor = $objOglas -> majstor;
+                  $ponuda = $objOglas -> ponuda;
+                  $tempTime = $objOglas -> vreme;
+                  $tempDate = explode(" ", $tempTime);
+                  $tempDatum = $tempDate[0];
+                  $tempVreme = $tempDate[1];
+                  $datum = datum($tempDatum);
+                  $vreme = vreme($tempVreme);
+                  $upitMajstor = "select * from majstori where ident='$majstor'";
+                  $rezMajstor = $db -> query($upitMajstor);
+                  $objMajstor = mysqli_fetch_object($rezMajstor);
+                  $ime = $objMajstor -> ime;
+                  $prezime = $objMajstor -> prezime;
+                  $name = $ime . " " . $prezime;
+
+               ?>
+
+               <div class="jedna-ponuda">
+
+               <div class="ponude-box">
+
+               </div>
+
+               <div class="dugmici">
+
+                 <ul>
+                   <li><a href="#">Pošalji poruku</a></li>
+                 </ul>
+
+               </div>
+
+             </div><!--kraj diva jedna-ponuda-->
+
+              <?php
+                }
+              ?>
+
+             </div><!--kraj diva ponude-->
+
 
              <?php
               }else{
