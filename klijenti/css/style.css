@@ -189,6 +189,7 @@ nav ul li a:hover{
 #main .ponude-box{
   width: 70%;
   float: left;
+  margin: 1% 0 1% 1%;
 }
 
 #main .dugmici li.status{
@@ -240,6 +241,24 @@ nav ul li a:hover{
   font-weight: bolder;
   display: block;
   margin-left: 5px;
+}
+
+#inbox{
+  width: 79%;
+  float: right;
+  padding-left: 1%;
+  border-left: 1px dotted grey;
+  overflow: hidden;
+}
+
+#inbox h2{
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+#inbox section{
+  position: relative;
+  width: 100%;
 }
 
 #body .main-box{

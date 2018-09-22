@@ -29,13 +29,9 @@
               <div class="logo">
 
               </div>
-              <nav>
-                <ul>
-                  <li><a href="#">PORUKE</a></li>
-                  <li><a href="profile.php"><?php echo $_SESSION["username"]; ?></a></li>
-                  <li><a href="logout.php">ODJAVI SE</a></li>
-                </ul>
-              </nav>
+
+                <?php include('topMenu.php'); ?>
+
           </div>
       </div>
       <div class="top-banner">
@@ -231,13 +227,20 @@
                   $ime = $objMajstor -> ime;
                   $prezime = $objMajstor -> prezime;
                   $name = $ime . " " . $prezime;
+                  $zanat = $objMajstor -> delatnost;
+                  $opisDelatnosti = $objMajstor -> opis;
 
                ?>
 
                <div class="jedna-ponuda">
 
                <div class="ponude-box">
-
+                 <h2><?php echo $name; ?></h2>
+                 <small><?php echo $zanat . " / Postavljeno: " . $datum . " " . $vreme; ?></small><br /><br /><br />
+                 <h3>PONUDA</h3><br />
+                 <p><?php echo $ponuda; ?></p><br /><br /><br />
+                 <h3>OPIS DELATNOSTI KOJU OBAVLJA</h3><br />
+                 <p><?php echo $opisDelatnosti; ?></p>
                </div>
 
                <div class="dugmici">

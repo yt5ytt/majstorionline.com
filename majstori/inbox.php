@@ -51,18 +51,7 @@
               <li><a href="#">Ukloni profil</a></li>
             </ul>
           </div>
-          <div class="profile-main">
-            <h1><?php echo $username; ?><small><?php echo "(" . $ident . ")"; ?></small></h1>
-            <h3><?php echo $ime . " " . $prezime . " - " . $delatnost; ?></h3>
-            <p><?php echo $email; ?></p>
-            <p><?php echo $adresa; ?></p>
-            <h3><?php echo $grad; ?></h3>
-            <h3><?php echo $telefon; ?></h3>
-          </div>
-          <div class="profile-side">
-            <p><?php echo $dodatnaDelatnost; ?></p>
-            <p><?php echo $opis; ?></p>
-          </div>
+          
         </div>
 
       </div>

@@ -29,7 +29,7 @@
           $password = $_POST["password"];
           $kategorija = $_POST["kategorija"];
 
-          $upit = "select email, password from $kategorija where email='$email'";
+          $upit = "select ident, email, password from $kategorija where email='$email'";
           $rez = $db -> query($upit);
           $numRows = $rez -> num_rows;
 
@@ -45,6 +45,7 @@
             while ($obj = mysqli_fetch_object($rez)) {
               $dbEmail = $obj -> email;
               $dbPass = $obj -> password;
+              $ident = $obj -> ident;
 
               if($password != $dbPass){
         ?>
@@ -58,6 +59,7 @@
               }else{
 
                 $_SESSION["email"] = $email;
+                $_SESSION["ident"] = $ident;
         ?>
           <script type="text/javascript">
             window.location.href = "<?php echo $kategorija;?>/index.php";
