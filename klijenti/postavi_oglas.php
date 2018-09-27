@@ -48,7 +48,7 @@
 
           <div class="main-box">
 
-            <form action="oglasFunction.php" method="post" enctype="multipart/form-data">
+            <form class="postaviOglas" action="oglasFunction.php" method="post" enctype="multipart/form-data">
               <section class="row">
                 <label for="zanat">POTREBAN</label>
                 <select name="zanat">
