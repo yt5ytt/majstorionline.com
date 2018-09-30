@@ -23,12 +23,12 @@
 
       <div class="middle-box">
         <div class="buttons">
-          <a href="#">
+          <a href="registracija/spisakMajstora.php">
             (potreban ti je majstor)<br />
             <h2>OBJAVI<br />
             POSAO</h2>
           </a>
-          <a href="#">
+          <a href="registracija/pronadjiPosao.php">
             (majstori)<br />
             <h2>PRONAĐITE<br />
             POSAO</h2>

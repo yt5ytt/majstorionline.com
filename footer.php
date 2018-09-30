@@ -1,4 +1,4 @@
-      <div class="top-line">
+      <div class="footer-line">
           <div class="logo-nav wrapper">
               <nav>
                 <ul>

@@ -32,7 +32,6 @@ p{
 #container{
   background-color: rgba(0, 0, 0, 0.7);
   overflow: hidden;
-  height: 100%;
 }
 
 .top-line{
@@ -84,8 +83,63 @@ nav ul li a:hover{
 }
 
 .middle-box{
-  height: calc(100% - 6em);
+  position: relative;
+  min-height: 600px;
   width: 100%;
+  overflow-y: scroll;
+}
+
+.pronadjiPosao{
+  padding-top: 2%;
+  color: white;
+}
+
+.trenutniPoslovi{
+  padding-top: 2%;
+  color: white;
+}
+
+.trenutniPoslovi h3{
+  text-decoration: underline;
+  margin-bottom: 1%;
+}
+
+.jedanOglas{
+  border-bottom: 1px dotted white;
+  padding: 1% 0;
+}
+
+.jedanOglas:last-child{
+  border-bottom: none;
+}
+
+.jedanOglas h3{
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.jedanOglas p{
+  font-size: 1.2em;
+}
+
+.pagination{
+  margin: 2% 0;
+  text-align: center;
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.pagination a{
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.pagination a.active{
+  background-color: rgba(218, 11, 11, 0.6);
+  outline: 1px dotted white;
 }
 
 .buttons{
@@ -144,7 +198,7 @@ input.login-text{
   text-indent: 2%;
 }
 
-input.submit{
+/*input*/.submit{
   width: 30%;
   background-color:  rgba(218, 11, 11, 0);
   color: white;

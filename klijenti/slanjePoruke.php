@@ -9,7 +9,7 @@
   $korespondent = $_POST["primalac"];
   $poruka = $_POST["tekst"];
 
-  $upisi = "insert into inbox_$ident (korespondent, posiljalac, primalac, poruka) values ('$korespondent', '$ident', '$korespondent', '$poruka')";
+  $upisi = "insert into inbox_$ident (korespondent, posiljalac, primalac, poruka, status) values ('$korespondent', '$ident', '$korespondent', '$poruka', '1')";
   $rezUpisi = $db -> query($upisi);
 
   $posalji = "insert into inbox_$korespondent (korespondent, posiljalac, primalac, poruka) values ('$ident', '$ident', '$korespondent', '$poruka')";

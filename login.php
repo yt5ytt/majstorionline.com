@@ -33,7 +33,7 @@
                 <option value="klijenti">Klijent</option>
               </select>
               <input class="submit" type="submit" name="submit" value="ULOGUJ SE"><br />
-              <a class="forgotten" href="#">Zaboravili ste lozinku?</a>
+              <a class="forgotten" href="zaboravljenaLozinka.php">Zaboravili ste lozinku?</a>
             </form>
           </div>
         </div>

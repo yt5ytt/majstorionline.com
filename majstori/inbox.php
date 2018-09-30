@@ -91,9 +91,9 @@
                         $rezPP = $db -> query($upitPP);
                         $objPP = mysqli_fetch_object($rezPP);
                         $PP = $objPP -> poruka;
-                        $nekiTekst = substr($PP, 0, 150);
+                        $nekiTekst = substr($PP, 0, 50);
                       ?>
-                    <p><?php echo $PP; ?></p>
+                    <p><?php echo $nekiTekst . "...>>>"; ?></p>
                   </section>
                 <?php
                 }
