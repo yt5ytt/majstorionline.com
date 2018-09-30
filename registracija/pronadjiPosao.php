@@ -52,7 +52,11 @@
               $vreme = vreme($tempVreme);
               $zanat = $obj -> zanat;
               $opis = $obj -> opis;
-              $identOglasa = $obj -> identoglasa;
+              $status = $obj -> status;
+
+              if($status == 0){
+                continue;
+              }
 ?>
               <div class="jedanOglas">
                 <h3>Potreban <?php echo $zanat; ?></h3>

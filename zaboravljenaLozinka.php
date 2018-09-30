@@ -35,8 +35,6 @@
             $rezKlijenti = $db -> query($upitKlijenti);
             $klijenti = $rezKlijenti -> num_rows;
             if($majstori === 0 AND $klijenti === 0){
-              echo $majstori;
-              echo $klijenti;
 
 ?>
               <div class="conf-box wrapper">
@@ -66,7 +64,7 @@
 ?>
               <div class="conf-box wrapper">
                 <h3>Poruka sa novom lozinkom je poslata na vašu email adresu. Znajte da ako imate registrovan nalog i kao majstor i kao klijent sa istom email adresom, promena će važiti za oba naloga. Vašu lozinku možete ponovo promeniti u odeljku profila vašeg naloga.</h3><br />
-                <a class="submit" href="#" onclick="location.href='zaboravljenaLozinka.php'">Nazad</a>
+                <a class="submit" href="#" onclick="location.href='login.php'">Nazad</a>
               </div>
 <?php
             }

@@ -43,7 +43,6 @@
           <div class="sidebar">
             <ul>
               <li><a href="index.php">Početak</a></li>
-              <li><a href="pretraga.php">Pretraga</a></li>
               <li><a href="logout.php">Odjavi se</a></li>
             </ul>
           </div>
@@ -69,7 +68,7 @@
                 </div>
               <?php
                 }
-              
+
                 while($obj = mysqli_fetch_object($rez)){
                   $posiljalac = $obj -> posiljalac;
                   $primalac = $obj -> primalac;

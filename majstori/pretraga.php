@@ -66,6 +66,11 @@
               $slika2 = $obj -> slika2;
               $slika3 = $obj -> slika3;
               $klijent = $obj -> klijent;
+              $status = $obj -> status;
+
+              if($status == 0){
+                continue;
+              }
 
               $upitKlijent = "select * from klijenti where ident='$klijent' limit 1";
               $rezKlijent = $db -> query($upitKlijent);

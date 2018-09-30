@@ -125,6 +125,7 @@ nav ul li a:hover{
   position: absolute;
   top: 30%;
   width: 100%;
+  color: white;
 }
 
 .login-box{
@@ -241,6 +242,10 @@ form a.forgotten:hover{
   top: 40%;
   margin-top: 7em;
   text-align: center;
+}
+
+.conf-box h3{
+  color: white;
 }
 
 .conf-box a.submit{
