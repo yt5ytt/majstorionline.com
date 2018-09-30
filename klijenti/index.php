@@ -62,7 +62,7 @@
 ?>
             <div class="majstor-box">
               <div class="contact">
-                <a href="#">Pošalji poruku</a>
+                <a href="poruke.php?korespondent=<?php echo $ident; ?>&imeMajstora=<?php echo $ime; ?>">Pošalji poruku</a>
               </div>
               <h3 class="naslov"><a href="#"><?php echo $ime . " " . $prezime; ?></a></h3><br />
               <h2><?php echo $delatnost; ?></h2><br />

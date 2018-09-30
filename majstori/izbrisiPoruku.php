@@ -11,6 +11,6 @@
 
 ?>
 
-<script type="text/javascript">
-  window.location.href = "inbox.php";
-</script>
+  <script type="text/javascript">
+    window.location.href = "inbox.php";
+  </script>

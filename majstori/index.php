@@ -2,6 +2,7 @@
   session_start();
   include("header.php");
   $email = $_SESSION["email"];
+  $ident = $_SESSION["ident"];
   include("../db/db_connect.php");
 ?>
 

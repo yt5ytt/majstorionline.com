@@ -94,7 +94,7 @@
               }
             ?>
 
-          </div>
+          </div><!--kraj diva #inbox-->
 
 
         </div>

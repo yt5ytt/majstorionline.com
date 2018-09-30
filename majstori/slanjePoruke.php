@@ -1,6 +1,5 @@
 <?php
   session_start();
-  include("header.php");
   $email = $_SESSION["email"];
   $ident = $_SESSION["ident"];
   include("../db/db_connect.php");
@@ -14,7 +13,6 @@
 
   $posalji = "insert into inbox_$korespondent (korespondent, posiljalac, primalac, poruka) values ('$ident', '$ident', '$korespondent', '$poruka')";
   $rezPosalji = $db -> query($posalji);
-
 ?>
 
   <script type="text/javascript">

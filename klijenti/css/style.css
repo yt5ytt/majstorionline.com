@@ -281,6 +281,10 @@ nav ul li a:hover{
   color: white;
 }
 
+#inbox .nemaPoruka{
+  padding: 2% 0;
+}
+
 #inbox section{
   position: relative;
   width: 100%;

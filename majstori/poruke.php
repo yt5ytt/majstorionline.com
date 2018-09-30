@@ -13,7 +13,7 @@
   <body>
     <div id="main" role="main">
       <?php
-        $upitProfil = "select * from klijenti where email='$email'";
+        $upitProfil = "select * from majstori where email='$email'";
         $rezProfil = $db -> query($upitProfil);
         while($objProfil = mysqli_fetch_object($rezProfil)){
           $ident = $objProfil -> ident;
@@ -39,12 +39,12 @@
       </div>
 
       <div id="body">
-        <div class="body-box wrapper">
-          <div class="sidebar">
+        <div class="profile-box wrapper">
+          <div id="sidebar">
             <ul>
               <li><a href="index.php">Početak</a></li>
-              <li><a href="pretraga.php">Pretraga</a></li>
-              <li><a href="logout.php">Odjavi se</a></li>
+              <li><a href="#">Izmeni profil</a></li>
+              <li><a href="#">Ukloni profil</a></li>
             </ul>
           </div>
           <div id="inbox">

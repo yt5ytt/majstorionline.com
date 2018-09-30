@@ -246,7 +246,7 @@
                <div class="dugmici">
 
                  <ul>
-                   <li><a href="#">Pošalji poruku</a></li>
+                   <li><a href="poruke.php?korespondent=<?php echo $majstor; ?>&imeMajstora=<?php echo $ime; ?>">Pošalji poruku</a></li>
                  </ul>
 
                </div>

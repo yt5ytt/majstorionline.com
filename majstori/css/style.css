@@ -6,6 +6,10 @@
   transition: all 0.3s linear;*/
 }
 
+body{
+  background-color: black;
+}
+
 .wrapper{
   width: 100%;
   max-width: 1080px;
@@ -310,6 +314,7 @@ nav ul li a:hover{
   border-left: 1px dotted grey;
   border-right: 1px dotted grey;
   color: white;
+  min-height: 300px;
 }
 
 .profile-main small{
@@ -320,6 +325,90 @@ nav ul li a:hover{
   width: 29%;
   float: right;
   color: white;
+}
+
+#inbox{
+  width: 79%;
+  float: right;
+  padding-left: 1%;
+  border-left: 1px dotted grey;
+  overflow: hidden;
+  min-height: 350px;
+  color: white;
+}
+
+#inbox .close a{
+  float: right;
+  background-color: rgba(252, 0, 0, 0.1);
+  font-weight: bolder;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#inbox .close a:hover{
+  background-color: rgba(252, 0, 0, 1);
+}
+
+#inbox h2{
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+}
+
+#inbox h3.nema{
+  font-size: 1.5em;
+  color: white;
+}
+
+#inbox .nemaPoruka{
+  padding: 2% 0;
+}
+
+#inbox section{
+  position: relative;
+  width: 100%;
+  padding: 1% 0;
+  overflow: hidden;
+  color: white;
+}
+
+#inbox .fromTo{
+  width: 90%;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+#inbox a{
+  text-decoration: none;
+  color: white;
+}
+
+#inbox h3:hover{
+  text-decoration: underline;
+}
+
+#inbox form.posaljiLinija{
+  bottom: 2%;
+  line-height: 2em;
+}
+
+#inbox .posaljiLinija input.tekst{
+  line-height: 2em;
+  width: 79%;
+}
+
+#inbox .posaljiLinija input.button{
+  line-height: 2em;
+  width: 20%;
+  background-color: rgba(243, 248, 0, 1);
+  cursor: pointer;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: black;
+  border-radius: 5px;
 }
 
 footer{
