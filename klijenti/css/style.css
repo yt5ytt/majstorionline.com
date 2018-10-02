@@ -329,6 +329,74 @@ nav ul li a:hover{
   border-radius: 5px;
 }
 
+#inbox .izmeniProfil{
+  width: 98%;
+  border: 1px solid rgba(243, 248, 0, 1);
+  margin: 1% auto;
+}
+
+#inbox .naslov{
+  width: 100%;
+  background-color: rgba(243, 248, 0, 1);
+  line-height: 3em;
+  color: black;
+}
+
+#inbox .naslov h3{
+  width: 98%;
+  margin: 0 auto;
+}
+
+#inbox .naslov h3:hover{
+  text-decoration: none;
+}
+
+#inbox .telo{
+  margin: 2% 0;
+}
+
+#inbox .telo section{
+  width: 60%;
+  margin: 0 auto;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+#inbox .telo label{
+  width: 29%;
+  float: left;
+  text-align: right;
+  line-height: 1.5em;
+}
+
+#inbox .telo .input{
+  width: 69%;
+  float: right;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+#inbox .telo textarea{
+  height: 20em;
+}
+
+#inbox .telo .submit{
+  width: 30%;
+  margin: 0 auto;
+  background-color: rgba(243, 248, 0, 1);
+  color: black;
+  line-height: 1.5em;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  float: right;
+}
+
+#inbox .telo .submit:hover{
+  font-weight: bolder;
+}
+
 #body .main-box{
   width: 79%;
   float: right;

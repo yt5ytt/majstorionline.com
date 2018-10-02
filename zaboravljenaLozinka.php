@@ -51,12 +51,12 @@
               $db -> query("update majstori set password='$novaLozinka' where email='$email'");
               $db -> query("update klijenti set password='$novaLozinka' where email='$email'");
               $poruka = "
-              Poštovani,\n\n
-              tražili ste da resetujete svoju lozinku na našem sajtu. Nova lozinka za ovu email adresu će biti:\n\n
-              $novaLozinka\n\n
-              Ukoliko imate registrovan nalog i kao klijent i kao majstor sa istom email adresom, lozinka će biti resetovana na oba naloga.\n\n
+              Poštovani,\n
+              tražili ste da resetujete svoju lozinku na našem sajtu. Nova lozinka za ovu email adresu će biti:\n\
+              $novaLozinka\n
+              Ukoliko imate registrovan nalog i kao klijent i kao majstor sa istom email adresom, lozinka će biti resetovana na oba naloga.\n
               S'poštovanjem\n
-              <i>MajstoriOnline.com</i>
+              MajstoriOnline.com
               ";
               $zaglavlje = "From: MajstoriOnline.com";
 

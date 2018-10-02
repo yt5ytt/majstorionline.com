@@ -45,5 +45,22 @@
       }
     </script>
 
+<!-- Scripta za potvrdu istovetnosti lozinke pri ponavljanju -->
+
+    <script type="text/javascript">
+      var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
+
+      function validatePassword(){
+        if(password.value != confirm_password.value) {
+          confirm_password.setCustomValidity("Niste ukucali istu lozinku");
+        } else {
+          confirm_password.setCustomValidity('');
+        }
+      }
+
+      //password.onchange = validatePassword;
+      //confirm_password.onkeyup = validatePassword;
+    </script>
+
   </body>
 </html>
