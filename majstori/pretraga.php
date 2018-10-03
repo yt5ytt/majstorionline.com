@@ -79,7 +79,7 @@
                 $ime = $objKlijent -> ime;
                 $prezime = $objKlijent -> prezime;
         ?>
-        <a href="pretraga.php?identOglasa=<?php echo $identOglasa; ?>">
+        <a href="pretraga.php?identOglasa=<?php echo $identOglasa; ?>&tempZanat=<?php echo $zanat; ?>">
           <div class="oglas">
             <div class="oglas-naslov">
               <h2>POTREBAN <?php echo $zanat; ?></h2>
@@ -126,6 +126,7 @@
             $slika2 = $obj -> slika2;
             $slika3 = $obj -> slika3;
             $klijent = $obj -> klijent;
+            $zanat = $_GET["tempZanat"];
 
             $upitKlijent = "select * from klijenti where ident='$klijent' limit 1";
             $rezKlijent = $db -> query($upitKlijent);
@@ -135,7 +136,7 @@
         ?>
           <div class="jedanoglas">
             <div class="ponudi">
-              <a class="submit" href="ponuda.php?identOglasa=<?php echo $identOglasa; ?>">Ponudi uslugu</a>
+              <a class="submit" href="ponuda.php?identOglasa=<?php echo $identOglasa; ?>&zanat=<?php echo $zanat; ?>">Ponudi uslugu</a>
             </div>
             <div class="oglas-naslov">
               <h2>POTREBAN <?php echo $zanat; ?></h2>

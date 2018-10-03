@@ -57,9 +57,11 @@
         $server = $_SERVER['HTTP_HOST'];
         $identKlijenta = $_POST["klijent"];
         $identOglasa = $_POST["identOglasa"];
+        $zanat = $_POST["zanat"];
         $ponuda = $_POST["ponudaPosao"];
         $tabela = "inbox_" . $identKlijenta;
-        $poruka = "Majstor $majstor se javio na vaš oglas. Ponudu možete pogledati ... <a href=\"http://$server/klijenti/profile.php?identOglasa=$identOglasa\">OVDE</a>";
+        $link = "http://" . $server . "/klijenti/profile.php?identOglasa=" . $identOglasa;
+        $poruka = 'Majstor ' . $majstor . ' se javio na vaš oglas. Ponudu možete pogledati ... <a href="' . $link . '">OVDE</a>';
 
         $upis = $db -> query("insert into $identOglasa (majstor, ponuda) values ('$identMajstora', '$ponuda')");
 
@@ -67,10 +69,23 @@
 
         if($upis & $slanjePoruke){
 
-          echo "Upisano!!! <br />";
+?>
+          <h3 class="nema">Uspešno ste konkurisali za ovaj posao. Pregledajte još oglasa po ovom kriterijumu</h3>
 
+          <div class="link-box1 wrapper">
+            <a class="submit" style="color: black;" href="pretraga.php?zanat=<?php echo $zanat; ?>"><?php echo $zanat; ?></a>
+          </div>
+
+<?php
         }else{
-          echo "Nije upisano!!!";
+?>
+          <h3 class="nema">Ponuda za ovaj posao nije poslata. Molimo vas, pokušajte ponovo!!!</h3>
+
+          <div class="link-box1 wrapper">
+            <a class="submit" style="color: black;" href="#" onclick="history.back(-1)">NAZAD</a>
+          </div>
+
+<?php
         }
 
       }elseif($_GET["identOglasa"]){
@@ -80,6 +95,7 @@
         $rezKlijent = $db -> query($upitKlijent);
         $objKlijent = mysqli_fetch_object($rezKlijent);
         $klijent = $objKlijent -> klijent;
+        $zanat = $_GET["zanat"];
  ?>
         <h2>Ponudi uslugu</h2>
         <form class="ponudaPosao" action="ponuda.php" method="post">
@@ -91,6 +107,7 @@
 
           <input type="hidden" name="identOglasa" value="<?php echo $identOglasa; ?>">
           <input type="hidden" name="klijent" value="<?php echo $klijent; ?>">
+          <input type="hidden" name="zanat" value="<?php echo $zanat; ?>">
 
           <button type="submit" name="submit">PONUDI USLUGU</button>
         </form>
