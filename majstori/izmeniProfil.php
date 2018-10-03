@@ -42,13 +42,7 @@
 
       <div id="body">
         <div class="profile-box wrapper">
-          <div id="sidebar">
-            <ul>
-              <li><a href="index.php">Početak</a></li>
-              <li><a href="#">Izmeni profil</a></li>
-              <li><a href="#">Ukloni profil</a></li>
-            </ul>
-          </div>
+          <?php include("sideMenu.php"); ?>
 
           <div id="inbox">
             <h2>IZMENI PROFIL</h2>

@@ -37,13 +37,8 @@
 
     <div class="pretraga-main wrapper">
 
-      <div id="sidebar">
-        <ul>
-          <li><a href="index.php">Početak</a></li>
-          <li><a href="#">Izmeni profil</a></li>
-          <li><a href="#">Ukloni profil</a></li>
-        </ul>
-      </div>
+      <?php include("sideMenu.php"); ?>
+
       <div id="oglasi">
         <h2>Pretraga po kategoriji <?php echo $zanat; ?></h2>
 
@@ -52,6 +47,12 @@
 
             $upit = "select * from oglasi where zanat='$zanat' order by vreme desc";
             $rez = $db -> query($upit);
+            $brojOglasa = $rez -> num_rows;
+
+            if($brojOglasa == 0){
+              echo "<h3 class='nema'>Јоš uvek nema aktuelnih oglasa u ovoj kategoriji!!!</h3>";
+            }
+
             while($obj = mysqli_fetch_object($rez)) {
               $tempTime = $obj -> vreme;
               $tempDate = explode(" ", $tempTime);

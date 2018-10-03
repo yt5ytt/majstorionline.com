@@ -48,8 +48,6 @@
           <div id="sidebar">
             <ul>
               <li><a href="index.php">Početak</a></li>
-              <li><a href="#">Izmeni profil</a></li>
-              <li><a href="#">Ukloni profil</a></li>
             </ul>
           </div>
 

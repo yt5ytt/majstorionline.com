@@ -397,6 +397,15 @@ nav ul li a:hover{
   font-weight: bolder;
 }
 
+#inbox .telo .dvaDugmeta{
+  text-align: center;
+}
+
+#inbox .telo .dvaDugmeta button{
+  margin: 0 1%;
+  float: none;
+}
+
 #body .main-box{
   width: 79%;
   float: right;

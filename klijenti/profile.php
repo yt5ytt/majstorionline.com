@@ -44,13 +44,7 @@
 
       <div id="body">
         <div class="body-box wrapper">
-          <div class="sidebar">
-            <ul>
-              <li><a href="index.php">Početak</a></li>
-              <li><a href="izmeniProfil.php">Izmeni profil</a></li>
-              <li><a href="#">Ukloni profil</a></li>
-            </ul>
-          </div>
+          <?php include("sideMenu.php"); ?>
           <div class="main-box">
             <div class="profile-box">
               <h1><?php echo $username; ?><small><?php echo "(" . $ident . ")"; ?></small></h1>
