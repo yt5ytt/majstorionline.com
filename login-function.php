@@ -29,7 +29,7 @@
           $password = $_POST["password"];
           $kategorija = $_POST["kategorija"];
 
-          $upit = "select ident, email, password from $kategorija where email='$email'";
+          $upit = "select ident, email, password from $kategorija where email='$email' limit 1";
           $rez = $db -> query($upit);
           $numRows = $rez -> num_rows;
 
