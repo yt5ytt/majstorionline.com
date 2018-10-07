@@ -86,7 +86,7 @@
                   move_uploaded_file($tempName3, "$dirLocation/$fileName3");
                 }
 
-                $oglas = "insert into oglasi (identoglasa, zanat, opis, slika1, slika2, slika3, klijent) values ('$identOglasa', '$zanat', '$opisPosla', '$fileName1', '$fileName2', '$fileName3', '$ident')";
+                $oglas = "insert into oglasi (identoglasa, zanat, opis, slika1, slika2, slika3, klijent, lokacija) values ('$identOglasa', '$zanat', '$opisPosla', '$fileName1', '$fileName2', '$fileName3', '$ident', '$lokacija')";
                 $unosOglasa = $db -> query($oglas);
 
                 if($unosOglasa){
