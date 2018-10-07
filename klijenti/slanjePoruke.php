@@ -15,6 +15,8 @@
   $posalji = "insert into inbox_$korespondent (korespondent, posiljalac, primalac, poruka) values ('$ident', '$ident', '$korespondent', '$poruka')";
   $rezPosalji = $db -> query($posalji);
 
+  echo "<div style='color:white;'>Slanje: From: $ident; To: $korespondent; Poruka: $poruka</div>";
+
 ?>
 
   <script type="text/javascript">

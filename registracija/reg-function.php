@@ -115,7 +115,7 @@
                   vreme timestamp not null default current_timestamp,
                   korespondent varchar(20) not null,
                   posiljalac varchar(20) not null,
-                  primala varchar(20) not null,
+                  primalac varchar(20) not null,
                   poruka text,
                   status int(1) not null default 0)";
                   $createTabela = $db -> query($addTabela);
@@ -227,7 +227,7 @@
                   vreme timestamp not null default current_timestamp,
                   korespondent varchar(20) not null,
                   posiljalac varchar(20) not null,
-                  primala varchar(20) not null,
+                  primalac varchar(20) not null,
                   poruka text,
                   status int(1) not null default 0)";
                   $createTabela = $db -> query($addTabela);
