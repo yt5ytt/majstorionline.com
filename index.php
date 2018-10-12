@@ -9,7 +9,7 @@
       <div class="top-line">
           <div class="logo-nav wrapper">
               <div class="logo">
-                
+                <h2>MajstoriOnline<small>.com</small></h2>
               </div>
               <nav>
                 <ul>
@@ -21,18 +21,23 @@
           </div>
       </div>
 
-      <div class="middle-box">
+      <div class="middle-box wrapper">
         <div class="buttons">
-          <a href="registracija/spisakMajstora.php">
-            (potreban ti je majstor)<br />
-            <h2>OBJAVI<br />
-            POSAO</h2>
-          </a>
-          <a href="registracija/pronadjiPosao.php">
-            (majstori)<br />
-            <h2>PRONAĐITE<br />
-            POSAO</h2>
-          </a>
+          <div class="largeButton">
+            <a href="registracija/spisakMajstora.php">
+              (potreban ti je majstor)<br />
+              <h2>OBJAVI<br />
+              POSAO</h2>
+            </a>
+          </div>
+
+          <div class="largeButton">
+            <a href="registracija/pronadjiPosao.php">
+              (majstori)<br />
+              <h2>PRONAĐITE<br />
+              POSAO</h2>
+            </a>
+          </div>
 
         </div>
       </div>

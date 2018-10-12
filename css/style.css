@@ -7,269 +7,204 @@
   font-family: serif;
 }
 
-html, body{
-height: 100%;
+body{
+  background-color: black;
 }
-
-html{
-  -moz-animation: pozadina 30s infinite;
-	-webkit-animation: pozadina 30s infinite;
-	animation: pozadina 30s infinite;
-}
-
-h1{
-  font-size: 3em;
-}
-
-h2{
-    font-size: 2.5em
-}
-
-h3{
-  font-size: 2em;
-}
-
-p{
-   font-size: 1.5em;
- }
 
 #container{
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
-.top-line{
-  color: white;
+#container .top-line{
+  position: fixed;
+  top: 0;
+  background-color: rgba(243, 248, 0, 1);
   line-height: 3em;
-  border-bottom: 1px dotted white;
-  overflow: hidden;
+  width: 100%;
 }
 
 .wrapper{
-  width: 100%;
+  width: 98%;
   max-width: 1080px;
   margin: 0 auto;
 }
 
-.top-line nav{
-  float: right;
+#container .logo-nav{
   line-height: 3em;
-  width: 60%;
+  overflow: hidden;
 }
 
-.logo{
+#container .logo{
   float: left;
+  width: 30%;
 }
 
-nav ul{
-  list-style-type: none;
+#container nav{
+  float: right;
+  width: 69%;
   text-align: right;
-}
-
-nav ul li{
-  display: inline;
   line-height: 3em;
 }
 
-nav ul li a{
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  width: 30%;
-  text-align: center;
-  font-weight: bolder;
-}
-
-nav ul li a:hover{
-  background-color: rgba(218, 11, 11, 0.6);
-  color: lightblue;
-  cursor: pointer;
-}
-
-.middle-box{
-  height: calc(100% - 6em);
-  width: 100%;
-  color: white;
-}
-
-.buttons{
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  width: 100%;
-}
-
-.buttons a{
-  display: inline-block;
-  width: 30%;
-  text-decoration: none;
-  color: white;
-  line-height: 3em;
-  border: 3px solid white;
-  border-radius: 20px;
-}
-
-.buttons a:first-child{
-  margin-right: 2%;
-}
-
-.buttons a:hover{
-  background-color: rgba(218, 11, 11, 0.6);
-  color: lightblue;
-  cursor: pointer;
-}
-
-.login-form{
-  position: absolute;
-  top: 30%;
-  width: 100%;
-  color: white;
-}
-
-.login-box{
-  width: 50%;
-  padding: 1% 0 0;
-  margin: 0 auto;
-  border: 3px solid white;
-  color: white;
-  border-radius: 20px;
-  text-align: center;
-}
-
-form{
-  line-height: 3em;
-}
-
-form input, form select{
-  line-height: 2em;
-  width: 90%;
-}
-
-input.login-text, select.login-text{
-  text-indent: 2%;
-}
-
-select.login-text{
-  width: 90%;
-  height: 2.5em;
-}
-
-input.submit{
-  width: 30%;
-  background-color:  rgba(218, 11, 11, 0);
-  color: white;
-  font-size: 1.2em;
-  border: none;
-  cursor: pointer;
-  font-weight: bolder;
-  line-height: 2.5em;
-}
-
-input.submit:hover{
-  background-color:  rgba(218, 11, 11, 0.6);
-  color: lightblue;
-}
-
-form a.forgotten{
-  color: white;
-}
-
-form a.forgotten:hover{
-  cursor: pointer;
-  background-color: rgba(218, 11, 11, 0.6);
-}
-
-.register-box{
-  margin-top: 1%;
-}
-
-.register-box h1{
-  color: white;
-  text-align: center;
-}
-
-.register-box p{
-  color: white;
-}
-
-.register-box p strong{
-  color: orange;
-}
-
-.reg-form{
-  width: 80%;
-  margin: 0 auto;
-  color: white;
-}
-
-.reg-head{
-  line-height: 2em;
-  width: 100%;
-  font-size: 1.5em;
-}
-
-.reg-head ul{
+#container nav ul{
   list-style-type: none;
-  width: 100%;
 }
 
-.reg-head li{
-  width: 49%;
+#container nav ul li{
   display: inline-block;
-  text-align: center;
-  cursor: pointer;
+  width: 25%;
 }
 
-.reg-head li.active{
-  background-color: rgba(255, 250, 250, 0.4);
-}
-
-.reg-head li a{
-  display: block;
-  text-decoration: none;
-  color: white;
-}
-
-.reg-body{
-  background-color: rgba(255, 250, 250, 0.4);
-  padding: 1% 0;
-  text-align: center;
-}
-
-.conf-box{
-  top: 40%;
-  margin-top: 7em;
-  text-align: center;
-}
-
-.conf-box h3{
-  color: white;
-}
-
-.conf-box a.submit{
+#container nav ul li a{
+  color: black;
+  font-weight: bolder;
   text-transform: uppercase;
   display: block;
-  width: 30%;
-  background-color:  rgba(218, 11, 11, 0);
-  color: white;
-  font-size: 1.2em;
-  border: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+#container nav ul li a:hover{
+  background-color: black;
+  color: rgba(243, 248, 0, 1);
+  cursor: pointer;
+}
+
+#container .middle-box{
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+#container .buttons{
+  width: 70%;
+  margin: 20% auto;
+}
+
+#container .largeButton{
+  width: 45%;
+  display: inline-block;
+  margin-right: 2%;
+  line-height: 2em;
+  border: 5px solid rgba(243, 248, 0, 1);
+  border-radius: 10px;
+}
+
+#container .largeButton:last-child{
+  margin-right: 0;
+}
+
+#container .largeButton:hover{
+  background-color: rgba(243, 248, 0, 1);
+}
+
+#container .largeButton:hover > a{
+  color: black;
+}
+
+#container .largeButton a{
+  text-decoration: none;
+  color: rgba(243, 248, 0, 1);
+  border: 5px solid black;
+  border-radius: 10px;
+  display: block;
+  padding: 2% 0;
+}
+
+#container .login-form{
+  margin: 15% auto;
+  width: 50%;
+  border: 1px solid rgba(243, 248, 0, 1);
+}
+
+#container .login-forma{
+  width: 98;
+  margin: 2% auto;
+}
+
+#container .login-text{
+  width: 90%;
+  line-height: 2em;
+  margin: 1% 0;
+  text-ident: 2%;
+}
+
+#container .submit{
+  line-height: 2em;
+  margin: 1% 0;
+  width: 40%;
+  background-color: rgba(243, 248, 0, 1);
+  color: black;
+}
+
+#container .submit:hover{
   cursor: pointer;
   font-weight: bolder;
-  line-height: 2.5em;
+}
+
+#container a.forgotten{
+  line-height: 2em;
+  color: rgba(243, 248, 0, 1);
   text-decoration: none;
+}
+
+#container a.forgotten:hover{
+  text-decoration: underline;
+}
+
+#container .conf-box{
+  margin: 20% auto;
+  width: 100%;
+}
+
+.notification{
+  width: 50%;
+  margin: 20% auto;
+  border: 3px solid rgba(243, 248, 0, 1);
+}
+
+.title{
+  line-height: 2.5em;
+  width: 100%;
   margin: 0 auto;
+  background-color: rgba(243, 248, 0, 1);
 }
 
-.conf-box a.submit:hover{
-  background-color:  rgba(218, 11, 11, 0.6);
-  color: lightblue;
+.title h2{
+  font-size: 1.5em;
+  color: black;
+}
+
+.notification .body{
+  width: 98%;
+  margin: 2% auto;
+  color: rgba(243, 248, 0, 1);
+}
+
+.notification .body p{
+  font-size: 1.3em;
+  margin: 1% 0;
+}
+
+.notification .body button{
+  display: inline-block;
+  margin: 2% 0;
+  line-height: 2em;
+  padding: 0 5%;
+  background-color: rgba(243, 248, 0, 1);
+  color: black;
+  text-transform: uppercase;
+}
+
+.notification .body button:hover{
   cursor: pointer;
+  font-weight: bolder;
 }
 
-.footer-line{
+#container .footer-line{
+  line-height: 3em;
+  background-color: rgba(243, 248, 0, 1);
   position: fixed;
   bottom: 0;
   width: 100%;

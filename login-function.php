@@ -11,7 +11,7 @@
       <div class="top-line">
           <div class="logo-nav wrapper">
               <div class="logo">
-
+                <h2>MajstoriOnline<small>.com</small></h2>
               </div>
               <nav>
                 <ul>
@@ -23,7 +23,7 @@
           </div>
       </div>
 
-      <div class="middle-box" style="color: white;">
+      <div class="middle-box wrapper">
         <?php
           $email = $_POST["email"];
           $password = $_POST["password"];
@@ -36,9 +36,15 @@
           if($numRows == 0){
         ?>
             <div class="conf-box wrapper">
-              <h2>Korisnik sa ovom email adresom ne postoji, pokušajte ponovo!</h2><br />
-              <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
-
+              <div class="notification">
+                <div class="title">
+                  <h2>OBAVEŠTENJE</h2>
+                </div>
+                <div class="body">
+                  <p>Korisnik sa ovom email adresom ne postoji, pokušajte ponovo!</p>
+                  <input type="submit" class="submit" onclick="history.back(-1)" value="NAZAD" />
+                </div>
+              </div>
             </div>
         <?php
           }else{
@@ -50,9 +56,15 @@
               if($password != $dbPass){
         ?>
             <div class="conf-box wrapper">
-            <h2>Pogrešili ste lozinku, pokušajte ponovo!</h2><br />
-            <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
-
+              <div class="notification">
+                <div class="title">
+                  <h2>OBAVEŠTENJE</h2>
+                </div>
+                <div class="body">
+                  <p>Pogrešili ste lozinku, pokušajte ponovo!</p>
+                  <input type="submit" class="submit" onclick="history.back(-1)" value="NAZAD" />
+                </div>
+              </div>
             </div>
         <?php
 

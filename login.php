@@ -9,7 +9,7 @@
       <div class="top-line">
           <div class="logo-nav wrapper">
               <div class="logo">
-
+                <h2>MajstoriOnline<small>.com</small></h2>
               </div>
               <nav>
                 <ul>
@@ -21,10 +21,13 @@
           </div>
       </div>
 
-      <div class="middle-box">
+      <div class="middle-box wrapper">
         <div class="login-form">
-          <div class="login-box">
-            <h3>LOGIN</h3>
+
+          <div class="title">
+            <h2>LOGIN</h2>
+          </div>
+
             <form class="login-forma" action="login-function.php" method="post">
               <input class="login-text" type="email" name="email" placeholder="Email adresa" required>
               <input class="login-text" type="password" name="password" placeholder="Lozinka" required>
@@ -35,7 +38,7 @@
               <input class="submit" type="submit" name="submit" value="ULOGUJ SE"><br />
               <a class="forgotten" href="zaboravljenaLozinka.php">Zaboravili ste lozinku?</a>
             </form>
-          </div>
+            
         </div>
       </div>
 <?php

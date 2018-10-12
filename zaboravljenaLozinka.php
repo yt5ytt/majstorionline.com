@@ -38,8 +38,15 @@
 
 ?>
               <div class="conf-box wrapper">
-                <h3>Korisnik sa ovom email adresom ne postoji, pokušajte ponovo!</h3><br />
-                <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
+                <div class="notification">
+                  <div class="title">
+                    <h2>OBAVEŠTENJE</h2>
+                  </div>
+                  <div class="body">
+                    <p>Korisnik sa ovom email adresom ne postoji, pokušajte ponovo!</p>
+                    <input type="submit" class="submit" onclick="history.back(-1)" value="NAZAD" />
+                  </div>
+                </div>
               </div>
 
 <?php
@@ -63,21 +70,34 @@
               mail($email, $subject, $poruka, $zaglavlje);
 ?>
               <div class="conf-box wrapper">
-                <h3>Poruka sa novom lozinkom je poslata na vašu email adresu. Znajte da ako imate registrovan nalog i kao majstor i kao klijent sa istom email adresom, promena će važiti za oba naloga. Vašu lozinku možete ponovo promeniti u odeljku profila vašeg naloga.</h3><br />
-                <a class="submit" href="#" onclick="location.href='login.php'">Nazad</a>
+                <div class="notification">
+                  <div class="title">
+                    <h2>OBAVEŠTENJE</h2>
+                  </div>
+                  <div class="body">
+                    <p>Poruka sa novom lozinkom je poslata na vašu email adresu. Znajte da ako imate registrovan nalog i kao majstor i kao klijent sa istom email adresom, promena će važiti za oba naloga. Vašu lozinku možete ponovo promeniti u odeljku profila vašeg naloga.</p>
+                    <input type="submit" class="submit" onclick="location.href='login.php'" value="NAZAD" />
+                  </div>
+                </div>
               </div>
 <?php
             }
 
           }else{
 ?>
-          <div class="login-box">
-            <h3>Unesite svoju email adresu</h3><br />
-            <form class="login-forma" action="zaboravljenaLozinka.php" method="post">
-              <input class="login-text" type="email" name="email" placeholder="Email adresa" required>
-              <input class="submit" type="submit" name="submitLozinka" value="POŠALJI">
-            </form>
-          </div>
+
+
+
+              <div class="title">
+                <h2>Unesite svoju email adresu</h2>
+              </div>
+
+              <form class="login-forma" action="zaboravljenaLozinka.php" method="post">
+                <input class="login-text" type="email" name="email" placeholder="Email adresa" required>
+                <input class="submit" type="submit" name="submit" value="POŠALJI"><br />
+              </form>
+
+
 <?php
           }
 
