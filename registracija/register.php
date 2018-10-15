@@ -42,17 +42,11 @@
                 <form action="reg-function.php" method="post">
                   <input class="login-text" type="text" name="username" placeholder="Korisničko ime" required>
                   <input class="login-text" type="email" name="email" placeholder="Email" required>
-                  <input class="login-text" type="text" name="passwd" placeholder="Lozinka" required>
-                  <input class="login-text" type="text" name="passwd1" placeholder="Ponovi lozinku" required>
+                  <input id="password" class="login-text" type="password" name="passwd" placeholder="Lozinka" required>
+                  <input id="confirm_password" class="login-text" type="password" name="passwd1" placeholder="Ponovi lozinku" required>
                   <input class="login-text" type="text" name="ime" placeholder="Ime" required>
                   <input class="login-text" type="text" name="prezime" placeholder="Prezime" required>
-                  <!--<input class="login-text" type="text" name="adresa" placeholder="Adresa" required>
-                  <input class="login-text" type="text" name="grad" placeholder="Grad" required>
-                  <input class="login-text" type="text" name="telefon" placeholder="Kontakt telefon" required>
-                  <input class="login-text" type="text" name="telefon1" placeholder="Drugi kontakt telefon (opciono)">-->
                   <?php
-                    /*$num1 = rand(1,9);
-                    $num2 = rand(1,9);*/
                     $sum = rand(11,99);
                    ?>
                   <input class="login-text" type="text" name="potvrda" placeholder="Potvrdite da niste robot: Upišite <?php echo $sum; ?> (OBAVEZNO)" required>
@@ -80,13 +74,10 @@
               <form action="reg-function.php" method="post">
                 <input class="login-text" type="username" name="username" placeholder="Korisničko ime" required>
                 <input class="login-text" type="email" name="email" placeholder="Email" required>
-                <input class="login-text" type="text" name="passwd" placeholder="Lozinka" required>
-                <input class="login-text" type="text" name="passwd1" placeholder="Ponovi lozinku" required>
+                <input id="password" class="login-text" type="password" name="passwd" placeholder="Lozinka" required>
+                <input id="confirm_password" class="login-text" type="password" name="passwd1" placeholder="Ponovi lozinku" required>
                 <input class="login-text" type="text" name="ime" placeholder="Ime" required>
                 <input class="login-text" type="text" name="prezime" placeholder="Prezime" required>
-                <!--<input class="login-text" type="text" name="adresa" placeholder="Adresa" required>
-                <input class="login-text" type="text" name="grad" placeholder="Grad" required>
-                <input class="login-text" type="text" name="telefon" placeholder="Kontakt telefon" required>-->
                 <textarea class="login-text" type="text" name="opis" placeholder="Kratak opis delatnosti"></textarea>
                 <select class="login-text" name="delatnost">
                     <option value="#" selected>--Delatnost--</option>
@@ -112,8 +103,6 @@
                 </select>
 
                 <?php
-                  /*$num1 = rand(1,9);
-                  $num2 = rand(1,9);*/
                   $sum = rand(11,99);
                  ?>
                 <input class="login-text" type="text" name="potvrda" placeholder="Potvrdite da niste robot: Upišite <?php echo $sum; ?> (OBAVEZNO)" required>

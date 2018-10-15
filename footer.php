@@ -8,7 +8,7 @@
           </div>
       </div>
 
-    </div>
+    </div><!--kraj diva #container-->
 
   </body>
 </html>

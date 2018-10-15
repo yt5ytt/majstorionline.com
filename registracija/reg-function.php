@@ -23,6 +23,7 @@
       </div>
 
       <div class="wrapper">
+
         <div class="register-box">
           <h1>REGISTRACIJA</h1><br />
           <p>Klikom na <strong>Registruj klijenta</strong> registrovaćete se kao klijent kome je potreban majstor za izvođenje radova, a klikom na <strong>Registruj majstora</strong> registrovaćete se kao majstor koji konkuriše za ponuđene poslove</p><br />
@@ -49,60 +50,50 @@
                 $potvrda = $_POST["potvrda"];
                 $sum = $_POST["sum"];
 
-                $upit = "select email from klijenti";
+                $upit = "select email from klijenti where email='$email'";
                 $rez = $db -> query($upit);
-                while($check_mail = mysqli_fetch_object($rez)){
+                $daLiIma = $rez -> num_rows;
 
-                  $check_email = $check_mail -> email;
-
-                  if($email != $check_email){
-
-                    continue;
-
-                  }elseif($email == $check_email){
-
-                    //Ovde kod za klijenta da email vec postoji
-
-                  ?>
-                    <div class="conf-box">
-                      <h2>Klijent sa ovom email adresom već postoji, pokušajte ponovo!</h2><br />
-                      <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
-
+                if($daLiIma != 0){
+?>
+                  <div class="notification">
+                    <div class="title">
+                      <h2>OBAVEŠTENJE</h2>
                     </div>
-
-
-                  <?php
-
-                    goto Footer;
-
-                  }
-
-                }
-
-                if($password != $password1){
+                    <div class="body">
+                      <p>Klijent sa ovom email adresom već postoji, pokušajte ponovo!</p>
+                      <button onclick="history.back(-1)">Nazad</button>
+                    </div>
+                  </div>
+<?php
+                }elseif($password != $password1){
 
                   //Ovde kod da potvrda passworda nije uspela
-                  ?>
-                    <div class="conf-box">
-                      <h2>Niste oba puta upisali istu lozinku, pokušajte ponovo!</h2><br />
-                        <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
+?>
+                  <div class="notification">
+                    <div class="title">
+                      <h2>OBAVEŠTENJE</h2>
                     </div>
-
-
-                  <?php
-
+                    <div class="body">
+                      <p>Niste oba puta upisali istu lozinku, pokušajte ponovo!</p>
+                      <button onclick="history.back(-1)">Nazad</button>
+                    </div>
+                  </div>
+<?php
                 }elseif($potvrda != $sum){
 
                   //Ovde kod da potvrda za robota nije uspela
-                  ?>
-                    <div class="conf-box">
-                      <h2>Potvrda da niste robot nije uspela, pokušajte ponovo!</h2><br />
-                        <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
+?>
+                  <div class="notification">
+                    <div class="title">
+                      <h2>OBAVEŠTENJE</h2>
                     </div>
-
-
-                  <?php
-
+                    <div class="body">
+                      <p>Potvrda da niste robot nije uspela, pokušajte ponovo!</p>
+                      <button onclick="history.back(-1)">Nazad</button>
+                    </div>
+                  </div>
+<?php
                 }else{
 
                   //Ovde kod da registracija moze da se nastavi
@@ -122,14 +113,17 @@
 
                     if($upis AND $createTabela){
 
-                    ?>
-                      <div class="conf-box">
-                        <h2>Uspešno ste se registrovali, sad se možete ulogovati!</h2><br />
-                        <a class="submit" href="../login.php">Uloguj se</a>
+?>
+                      <div class="notification">
+                        <div class="title">
+                          <h2>OBAVEŠTENJE</h2>
+                        </div>
+                        <div class="body">
+                          <p>Uspešno ste se registrovali, sad se možete ulogovati!</p>
+                          <button onclick="window.location='../login.php'">ULOGUJ SE</button>
+                        </div>
                       </div>
-
-
-                    <?php
+<?php
                   }else{
 
                     echo "Doslo je negde do greske";
@@ -161,60 +155,50 @@
                 $potvrda = $_POST["potvrda"];
                 $sum = $_POST["sum"];
 
-                $upit = "select email from majstori";
+                $upit = "select email from majstori where email='$email'";
                 $rez = $db -> query($upit);
-                while($check_mail = mysqli_fetch_object($rez)){
+                $daLiIma = $rez -> num_rows;
 
-                  $check_email = $check_mail -> email;
-
-                  if($email != $check_email){
-
-                    continue;
-
-                  }elseif($email == $check_email){
-
-                    //Ovde kod za klijenta da email vec postoji
-
-                  ?>
-                    <div class="conf-box">
-                      <h2>Majstor sa ovom email adresom već postoji, pokušajte ponovo!</h2><br />
-                      <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
-
+                if($daLiIma != 0){
+?>
+                  <div class="notification">
+                    <div class="title">
+                      <h2>OBAVEŠTENJE</h2>
                     </div>
-
-
-                  <?php
-
-                    goto Footer;
-
-                  }
-
-                }
-
-                if($password != $password1){
+                    <div class="body">
+                      <p>Majstor sa ovom email adresom već postoji, pokušajte ponovo!</p>
+                      <button onclick="history.back(-1)">Nazad</button>
+                    </div>
+                  </div>
+<?php
+                }elseif($password != $password1){
 
                   //Ovde kod da potvrda passworda nije uspela
-                  ?>
-                    <div class="conf-box">
-                      <h2>Niste oba puta upisali istu lozinku, pokušajte ponovo!</h2><br />
-                        <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
+?>
+                  <div class="notification">
+                    <div class="title">
+                      <h2>OBAVEŠTENJE</h2>
                     </div>
-
-
-                  <?php
-
+                    <div class="body">
+                      <p>Niste oba puta upisali istu lozinku, pokušajte ponovo!</p>
+                      <button onclick="history.back(-1)">Nazad</button>
+                    </div>
+                  </div>
+<?php
                 }elseif($potvrda != $sum){
 
                   //Ovde kod da potvrda za robota nije uspela
-                  ?>
-                    <div class="conf-box">
-                      <h2>Potvrda da niste robot nije uspela, pokušajte ponovo!</h2><br />
-                        <a class="submit" href="#" onclick="history.back(-1)">Nazad</a>
+?>
+                  <div class="notification">
+                    <div class="title">
+                      <h2>OBAVEŠTENJE</h2>
                     </div>
-
-
-                  <?php
-
+                    <div class="body">
+                      <p>Potvrda da niste robot nije uspela, pokušajte ponovo!</p>
+                      <button onclick="history.back(-1)">Nazad</button>
+                    </div>
+                  </div>
+<?php
                 }else{
 
                   //Ovde kod da registracija moze da se nastavi
@@ -233,34 +217,29 @@
                   $createTabela = $db -> query($addTabela);
 
                     if($upis AND $addTabela){
-
-                    ?>
-                      <div class="conf-box">
-                        <h2>Uspešno ste se registrovali, sad se možete ulogovati!</h2><br />
-                        <a class="submit" href="../login.php">Uloguj se</a>
+?>
+                      <div class="notification">
+                        <div class="title">
+                          <h2>OBAVEŠTENJE</h2>
+                        </div>
+                        <div class="body">
+                          <p>Uspešno ste se registrovali, sad se možete ulogovati!</p>
+                          <button onclick="window.location='../login.php'">ULOGUJ SE</button>
+                        </div>
                       </div>
-
-
-                    <?php
+<?php
                   }else{
 
                     echo "Doslo je negde do greske";
 
                   }
                 }
-
-            ?>
-
-
-            <?php
-
               }
-            ?>
+?>
 
-          </div>
-        </div>
-      </div>
+          </div><!--kraj diva reg-form-->
+        </div><!--kraj diva register-box-->
+      </div><!--kraj diva .wrapper-->
 <?php
-Footer:
   include("footer.php");
 ?>
