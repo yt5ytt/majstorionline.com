@@ -48,7 +48,7 @@
           <?php include("sideMenu.php"); ?>
 
           <div class="profile-main">
-            <h1><?php echo $username; ?><small><?php echo "(" . $ident . ")"; ?></small></h1>
+            <h1><?php echo $username; ?></h1>
             <h3><?php echo $ime . " " . $prezime . " - " . $delatnost; ?></h3>
             <p><?php echo $email; ?></p>
             <p><?php echo $adresa; ?></p>

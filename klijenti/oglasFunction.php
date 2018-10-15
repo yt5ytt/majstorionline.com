@@ -23,14 +23,9 @@
                 <div class="logo">
 
                 </div>
-                <nav>
-                  <ul>
-                    <li><a href="#">PORUKE</a></li>
-                    <li><a href="#">POSTAVI OGLAS</a></li>
-                    <li><a href="profile.php"><?php echo $_SESSION["username"]; ?></a></li>
-                    <li><a href="logout.php">ODJAVI SE</a></li>
-                  </ul>
-                </nav>
+
+                  <?php include('topMenu.php'); ?>
+
             </div>
         </div>
         <div class="top-banner">
@@ -46,7 +41,6 @@
             <div class="sidebar">
               <ul>
                 <li><a href="index.php">Početak</a></li>
-                <li><a href="logout.php">Odjavi se</a></li>
               </ul>
             </div>
 

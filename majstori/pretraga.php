@@ -34,9 +34,11 @@
 
     <div class="pretraga-main wrapper">
 
-<?php
-      include("sideMenu.php");
-?>
+      <div id="sidebar">
+        <ul>
+          <li><a href="index.php">Početak</a></li>
+        </ul>
+      </div>
 
       <div id="oglasi">
 
