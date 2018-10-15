@@ -1,8 +1,8 @@
 <?php
   include("header.php");
- ?>
+?>
 
-    <title>Majstori Online - Početna</title>
+    <title>Majstori Online - Login</title>
   </head>
   <body>
     <div id="container">
@@ -14,7 +14,7 @@
               <nav>
                 <ul>
                   <li><a href="#">IDEJA SAJTA</a></li>
-                  <li><a href="login.php">PRIJAVI SE</a></li>
+                  <li><a href="index.php">POČETNA</a></li>
                   <li><a href="registracija/register.php?korisnik=klijent">REGISTRUJ SE</a></li>
                 </ul>
               </nav>
@@ -22,31 +22,19 @@
       </div>
 
       <div class="middle-box wrapper">
-        <div class="buttons">
-          <div class="largeButton">
-            <a href="registrujSe.php">
-              (potreban ti je majstor)<br />
-              <h2>OBJAVI<br />
-              POSAO</h2>
-            </a>
+        <div class="notification">
+
+          <div class="title">
+            <h2>OBAVEŠTENJE</h2>
           </div>
 
-          <div class="largeButton">
-            <a href="majstori/index.php">
-              (majstori)<br />
-              <h2>PRONAĐITE<br />
-              POSAO</h2>
-            </a>
+          <div class="body">
+            <p>Da biste ste mogli da postavite oglas, prvo se morate registrovati kao klijent</p>
+            <button class="submit" onclick="window.location='registracija/register.php?korisnik=klijent'">REGISTRUJ SE</button>
           </div>
 
         </div>
       </div>
-
-
-
-
-
-
 <?php
   include("footer.php");
 ?>

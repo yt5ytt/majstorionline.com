@@ -411,6 +411,7 @@ nav ul li a:hover{
   float: right;
   border-left: 1px dotted white;
   color: white;
+  min-height: 300px;
 }
 
 #body .main-box h2.oglas{

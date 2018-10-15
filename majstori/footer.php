@@ -57,9 +57,13 @@
           confirm_password.setCustomValidity('');
         }
       }
+    </script>
 
-      //password.onchange = validatePassword;
-      //confirm_password.onkeyup = validatePassword;
+    <script type="text/javascript">
+      function zanatLokacija(selectObject){
+        var lokacija = selectObject.value;
+        window.location.href = "pretraga.php?zanat=<?php echo $zanat; ?>&lokacija=" + lokacija;
+      }
     </script>
 
   </body>

@@ -311,6 +311,16 @@ nav ul li a:hover{
   cursor: pointer;
 }
 
+#pretrazivac{
+  width: 20%;
+  float: right;
+}
+
+#pretrazivac .lokacija{
+  width: 98%;
+  margin: 0 auto;
+}
+
 .profile-main{
   width: 50%;
   text-indent: 1%;
