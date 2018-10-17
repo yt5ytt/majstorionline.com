@@ -227,13 +227,14 @@ body{
   width: 100%;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 640px){
   #container .logo{
     width: 80%;
   }
 
   #container .logo h2{
     margin-left: 2%;
+    font-size: 1.5em;
   }
 
   #container nav{
