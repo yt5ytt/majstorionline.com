@@ -9,11 +9,14 @@
     <div id="container">
       <div class="top-line">
           <div class="logo-nav wrapper">
-              <div class="logo">
+            <div class="logo">
+              <h2>MajstoriOnline<small>.com</small></h2>
+            </div>
 
-              </div>
-              <nav>
-                <ul>
+            <span class="nav_btn"><i class="fa fa-bars"></i></span>
+
+            <nav>
+              <ul class="nav">
                   <li><a href="#">IDEJA SAJTA</a></li>
                   <li><a href="../index.php">POČETNA</a></li>
                   <li><a href="register.php?korisnik=klijent">REGISTRUJ SE</a></li>

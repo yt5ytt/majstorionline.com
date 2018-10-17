@@ -10,10 +10,13 @@
       <div class="top-line">
           <div class="logo-nav wrapper">
               <div class="logo">
-
+                <h2>MajstoriOnline<small>.com</small></h2>
               </div>
+
+              <span class="nav_btn"><i class="fa fa-bars"></i></span>
+
               <nav>
-                <ul>
+                <ul class="nav">
                   <li><a href="#">IDEJA SAJTA</a></li>
                   <li><a href="index.php">POČETNA</a></li>
                   <li><a href="registracija/register.php?korisnik=klijent">REGISTRUJ SE</a></li>
@@ -23,7 +26,7 @@
       </div>
 
       <div class="middle-box">
-        <div class="login-form">
+
 <?php
           if(@$_POST["submitLozinka"]){
 
@@ -34,7 +37,7 @@
             $upitKlijenti = "select email from klijenti where email='$email'";
             $rezKlijenti = $db -> query($upitKlijenti);
             $klijenti = $rezKlijenti -> num_rows;
-            if($majstori === 0 AND $klijenti === 0){
+            if($majstori == 0 AND $klijenti == 0){
 
 ?>
               <div class="conf-box wrapper">
@@ -87,22 +90,22 @@
 ?>
 
 
-
+            <div class="login-form">
               <div class="title">
                 <h2>Unesite svoju email adresu</h2>
               </div>
 
               <form class="login-forma" action="zaboravljenaLozinka.php" method="post">
                 <input class="login-text" type="email" name="email" placeholder="Email adresa" required>
-                <input class="submit" type="submit" name="submit" value="POŠALJI"><br />
+                <input class="submit" type="submit" name="submitLozinka" value="POŠALJI"><br />
               </form>
-
+            </div>
 
 <?php
           }
 
 ?>
-        </div>
+
       </div>
 <?php
   include("footer.php");

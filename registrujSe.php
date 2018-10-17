@@ -11,8 +11,11 @@
               <div class="logo">
                 <h2>MajstoriOnline<small>.com</small></h2>
               </div>
+
+              <span class="nav_btn"><i class="fa fa-bars"></i></span>
+
               <nav>
-                <ul>
+                <ul class="nav">
                   <li><a href="#">IDEJA SAJTA</a></li>
                   <li><a href="index.php">POČETNA</a></li>
                   <li><a href="registracija/register.php?korisnik=klijent">REGISTRUJ SE</a></li>
@@ -30,7 +33,7 @@
 
           <div class="body">
             <p>Da biste ste mogli da postavite oglas, prvo se morate registrovati kao klijent</p>
-            <button class="submit" onclick="window.location='registracija/register.php?korisnik=klijent'">REGISTRUJ SE</button>
+            <button class="submit" onclick="window.location='registracija/register.php?korisnik=klijent'"><nobr>REGISTRUJ SE</nobr></button>
           </div>
 
         </div>

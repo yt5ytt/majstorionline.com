@@ -11,8 +11,11 @@
               <div class="logo">
                 <h2>MajstoriOnline<small>.com</small></h2>
               </div>
+
+              <span class="nav_btn"><i class="fa fa-bars"></i></span>
+
               <nav>
-                <ul>
+                <ul class="nav">
                   <li><a href="#">IDEJA SAJTA</a></li>
                   <li><a href="index.php">POČETNA</a></li>
                   <li><a href="registracija/register.php?korisnik=klijent">REGISTRUJ SE</a></li>
@@ -38,7 +41,7 @@
               <input class="submit" type="submit" name="submit" value="ULOGUJ SE"><br />
               <a class="forgotten" href="zaboravljenaLozinka.php">Zaboravili ste lozinku?</a>
             </form>
-            
+
         </div>
       </div>
 <?php

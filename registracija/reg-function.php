@@ -10,10 +10,13 @@
       <div class="top-line">
           <div class="logo-nav wrapper">
               <div class="logo">
-
+                <h2>MajstoriOnline<small>.com</small></h2>
               </div>
+
+              <span class="nav_btn"><i class="fa fa-bars"></i></span>
+
               <nav>
-                <ul>
+                <ul class="nav">
                   <li><a href="#">IDEJA SAJTA</a></li>
                   <li><a href="../index.php">POČETNA</a></li>
                   <li><a href="register.php?korisnik=klijent">REGISTRUJ SE</a></li>
@@ -26,7 +29,6 @@
 
         <div class="register-box">
           <h1>REGISTRACIJA</h1><br />
-          <p>Klikom na <strong>Registruj klijenta</strong> registrovaćete se kao klijent kome je potreban majstor za izvođenje radova, a klikom na <strong>Registruj majstora</strong> registrovaćete se kao majstor koji konkuriše za ponuđene poslove</p><br />
 
           <div class="reg-form">
             <?php

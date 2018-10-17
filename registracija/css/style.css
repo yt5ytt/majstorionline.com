@@ -69,6 +69,23 @@ p{
   line-height: 3em;
 }
 
+#container .nav_btn{
+  display: none;
+  line-height: 3em;
+  width: 3em;
+  background-color: rgba(243, 248, 0, 1);
+  float: right;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+}
+
+#container .nav_btn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: rgba(243, 248, 0, 1);
+}
+
 #container nav ul{
   list-style-type: none;
 }
@@ -279,4 +296,105 @@ input.submit:hover{
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+@media screen and (max-width: 480px){
+  #container .logo{
+    width: 80%;
+  }
+
+  #container .logo h2{
+    margin-left: 2%;
+    font-size: 1em;
+  }
+
+  #container nav{
+    width: 100%;
+  }
+
+  #container nav ul.nav{
+    display: none;
+  }
+
+  #container nav ul.responsive{
+    display: block;
+  }
+
+  #container .nav_btn{
+    display: block;
+  }
+
+  #container nav ul li{
+    width: 100%;
+    display: block;
+  }
+
+  #container .buttons{
+    width: 90%;
+    margin: 4em auto;
+  }
+
+  #container .largeButton{
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  #container .login-form{
+    width: 90%;
+  }
+
+  .notification{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .notification .body button{
+    padding: 0;
+    font-size: 0.8em;
+  }
+
+  .register-box{
+    margin: 5em 0;
+  }
+
+  .register-box h1{
+    font-size: 2em;
+  }
+
+  .register-box p{
+    font-size: 1.2em;
+  }
+
+  .reg-form{
+    width: 95%;
+  }
+
+  .reg-head{
+    line-height: 1.2em;
+    font-size: 1.2em;
+  }
+
+  .reg-head li{
+    width: 45%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .reg-body input.submit{
+    font-size: 1.5em;
+    line-height: 2em;
+    width: 90%;
+    margin: 2% auto;
+
+  }
+
+  #container .footer-line li{
+    margin: 0;
+    width: inherit;
+    margin-right: 2%;
+    font-size: 0.8em;
+    display: inline-block;
+  }
+
+
 }
