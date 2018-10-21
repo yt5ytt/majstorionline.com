@@ -365,6 +365,7 @@ nav li.responsive{
   border-left: 1px dotted grey;
   border-right: 1px dotted grey;
   color: white;
+  min-height: 300px;
 }
 
 .profile-main small{
