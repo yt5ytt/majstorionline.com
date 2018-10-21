@@ -2,6 +2,7 @@
   session_start();
   include("header.php");
   $email = $_SESSION["email"];
+  $ident = $_SESSION["ident"];
   include("../db/db_connect.php");
 ?>
 
@@ -24,16 +25,8 @@
           $delatnost = $objProfil -> delatnost;
           $dodatnaDelatnost = $objProfil -> dodatna_delatnost;
         }
+        include("topMenu.php");
       ?>
-      <div class="top-line">
-          <div class="logo-nav wrapper">
-              <div class="logo">
-
-              </div>
-
-              <?php include("topMenu.php"); ?>
-          </div>
-      </div>
       <div class="top-banner">
         <div class="box">
           <div class="banner wrapper">
@@ -59,6 +52,13 @@
             <p><?php echo $dodatnaDelatnost; ?></p>
             <p><?php echo $opis; ?></p>
           </div>
+        </div>
+
+        <div class="responsiveSidebar">
+          <ul>
+            <li><a href="izmeniProfil.php">Izmeni profil</a></li>
+            <li><a href="izbrisiProfil.php">Ukloni profil</a></li>
+          </ul>
         </div>
 
       </div>

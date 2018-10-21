@@ -2,6 +2,7 @@
   session_start();
   include("header.php");
   $email = $_SESSION["email"];
+  $ident = $_SESSION["ident"];
   include("../db/db_connect.php");
   include("../function.php");
 ?>
@@ -10,15 +11,9 @@
   </head>
   <body>
     <div id="main" role="main">
-      <div class="top-line">
-          <div class="logo-nav wrapper">
-              <div class="logo">
-
-              </div>
-
-              <?php include("topMenu.php"); ?>
-          </div>
-      </div>
+<?php
+      include("topMenu.php");
+?>
       <div class="top-banner">
         <div class="box">
           <div class="banner wrapper">

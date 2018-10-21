@@ -104,7 +104,7 @@
               ?>
 
             <form class="posaljiLinija" action="slanjePoruke.php" method="post">
-              <input class="tekst" type="text" name="tekst" required autofocus>
+              <input class="tekst" type="text" name="tekst" autocomplete="off" required autofocus>
               <input class="button" type="submit" name="submit" value="Pošalji">
               <input type="hidden" name="primalac" value="<?php echo $majstor; ?>">
             </form>

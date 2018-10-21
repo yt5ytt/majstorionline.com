@@ -19,17 +19,8 @@
           $ident = $objProfil -> ident;
           $_SESSION["username"] = $objProfil -> username;
         }
+        include("topMenu.php");
       ?>
-      <div class="top-line">
-          <div class="logo-nav wrapper">
-              <div class="logo">
-
-              </div>
-
-              <?php include('topMenu.php'); ?>
-
-          </div>
-      </div>
       <div class="top-banner">
         <div class="box">
           <div class="banner wrapper">
@@ -84,7 +75,7 @@
                   <div class="fromTo" style="<?php
                   if($ident == $primalac){echo 'float: left; text-align: justify; background-color: rgba(252, 0, 0, 0.05); border: 1px solid red;';}elseif($ident == $posiljalac){echo 'float: right; text-align: justify; background-color: rgba(7, 201, 0, 0.05); border: 1px solid green;';} ?>">
               <?php
-                if($ident == $primalac){
+                /*if($ident == $primalac){
               ?>
                   <p><?php echo "<strong>" . $imeMajstora. "</strong> piše"; ?></p>
               <?php
@@ -92,7 +83,7 @@
               ?>
                 <p><?php echo "<strong>Vi</strong> pišete"; ?></p>
               <?php
-                }
+            }*/
               ?>
 
                     <small><?php echo $datum . " " . $vreme; ?></small><br />
@@ -104,7 +95,7 @@
               ?>
 
             <form class="posaljiLinija" action="slanjePoruke.php" method="post">
-              <input class="tekst" type="text" name="tekst" required autofocus>
+              <input class="tekst" type="text" name="tekst" autocomplete="off" required autofocus>
               <input class="button" type="submit" name="submit" value="Pošalji">
               <input type="hidden" name="primalac" value="<?php echo $majstor; ?>">
             </form>
@@ -121,4 +112,7 @@
 
         window.scrollTo(0,document.body.scrollHeight);
 
-      </script>
+        $('span.nav_btn').click(function(){
+          $('ul.nav').toggleClass('responsive');
+        })
+  		</script>

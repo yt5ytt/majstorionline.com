@@ -1,9 +1,9 @@
 *{
   margin: 0;
   padding: 0;
-  /*-moz-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;*/
+  transition: all 0.3s linear;
 }
 
 body{
@@ -25,6 +25,16 @@ body{
 .top-line{
   line-height: 3em;
   overflow: hidden;
+}
+
+.top-line .logo{
+  width: 30%;
+  float: left;
+}
+
+.top-line h2.responsiveLogo{
+  display: none;
+  color: white;
 }
 
 nav{
@@ -58,6 +68,27 @@ nav ul li a:hover{
   color: black;
 }
 
+span.nav_btn{
+  display: none;
+  line-height: 3em;
+  width: 3em;
+  background-color: rgba(243, 248, 0, 1);
+  float: right;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+}
+
+span.nav_btn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: rgba(243, 248, 0, 1);
+}
+
+nav li.responsive{
+  display: none;
+}
+
 .top-banner{
   background-color: rgba(243, 248, 0, 1);
   border-top: 5px solid rgba(243, 248, 0, 1);
@@ -84,7 +115,6 @@ nav ul li a:hover{
   width: 18%;
   float: left;
   border: 5px solid rgba(243, 248, 0, 1);
-  /*background-color: rgba(243, 248, 0, 1);*/
   overflow: hidden;
   border-radius: 10px;
   margin: 0.5%;
@@ -92,9 +122,7 @@ nav ul li a:hover{
 
 #body .link{
   border: 5px solid black;
-  /*background-color: white;*/
   border-radius: 10px;
-  /*display: block;*/
   text-align: center;
 }
 
@@ -123,6 +151,10 @@ nav ul li a:hover{
   border: 5px solid rgba(243, 248, 0, 1);
   background-color: rgba(243, 248, 0, 1);
   border-radius: 10px;
+}
+
+#body .responsiveSidebar{
+  display: none;
 }
 
 .body-box{
@@ -321,6 +353,11 @@ nav ul li a:hover{
   margin: 0 auto;
 }
 
+.profile-box{
+  overflow: hidden;
+  min-height: 300px;
+}
+
 .profile-main{
   width: 50%;
   text-indent: 1%;
@@ -328,7 +365,6 @@ nav ul li a:hover{
   border-left: 1px dotted grey;
   border-right: 1px dotted grey;
   color: white;
-  min-height: 300px;
 }
 
 .profile-main small{
@@ -526,4 +562,290 @@ footer .copyright a{
 
 footer .copyright a small{
   font-size: 0.8em;
+}
+
+@media screen and (max-width: 640px){
+
+  .wrapper{
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .top-line{
+    width: 100%;
+    background-color: rgba(243, 248, 0, 1);
+    color: black;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+  }
+
+  .top-line .logo{
+    width: 80%;
+  }
+
+.top-line h2.responsiveLogo{
+  margin-left: 2%;
+    display: block;
+    color: black;
+    font-size: 1.5em;
+  }
+
+  nav{
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul{
+    display: none;
+  }
+
+  nav ul.responsive{
+    display: block;
+  }
+
+  nav ul li{
+    display: inline;
+    text-align: center;
+  }
+
+  nav ul li a{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 100%;
+  }
+
+  span.nav_btn{
+    display: block;
+  }
+
+  nav li.responsive{
+    display: block;
+  }
+
+  .top-banner{
+    display: none;
+  }
+
+  #body .link-box{
+    width: 100%;
+  }
+
+  /*#body .link a{
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 1em;
+    display: block;
+    height: 3em;
+    font-weight: bolder;
+  }*/
+
+  #body .link a:hover{
+    color: white;
+  }
+
+  #body .link:hover{
+    background-color: black;
+    color: rgba(243, 248, 0, 1);
+  }
+
+  #body .link-box:hover{
+    border: 5px solid rgba(243, 248, 0, 1);
+    background-color: black;
+    border-radius: 10px;
+  }
+
+  #body .responsiveSidebar{
+    display: block;
+  }
+
+  #body .responsiveSidebar ul{
+    width: 100%;
+    list-style-type: none;
+  }
+
+  #body .responsiveSidebar li{
+    width: 98%;
+    text-align: center;
+    background-color: rgba(243, 248, 0, 1);
+    border-radius: 5px;
+    line-height: 2em;
+    margin: 2% auto;
+  }
+
+  #body .responsiveSidebar a{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+
+  #sidebar{
+    display: none;
+    width: 0;
+  }
+
+  #oglasi{
+    width: 98%;
+    margin: 0 auto;
+    float: none;
+    border-left: none;
+    overflow: hidden;
+    padding-left: 0;
+  }
+
+  #oglasi aside{
+    width: 100%;
+    padding: 1em 0;
+  }
+
+  #oglasi .ponudi{
+    clear: both;
+    width: 100%;
+  }
+
+  .link-box1 a{
+    width: 50%;
+  }
+
+  #inbox{
+    width: 98%;
+    float: none;
+    padding-left: 0;
+    margin: 0 auto;
+    border-left: none;
+  }
+
+  #inbox .close a{
+    float: right;
+    background-color: rgba(252, 0, 0, 1);
+  }
+
+  #inbox h2{
+    font-size: 1.5em;
+    color: rgba(243, 248, 0, 1);
+  }
+
+  #inbox h3.nema{
+    font-size: 1em;
+  }
+
+  #inbox .nemaPoruka{
+    padding: 0;
+  }
+
+  #inbox section{
+    padding: 1% 0;
+  }
+
+  #inbox .fromTo{
+    padding: 2%;
+  }
+
+  #inbox h3:hover{
+    text-decoration: none;
+  }
+
+  #inbox .posaljiLinija input.tekst{
+    width: 100%;
+  }
+
+  #inbox .posaljiLinija input.button{
+    width: 100%;
+  }
+
+  #inbox .naslov h3{
+    font-size: 1em;
+  }
+
+  #inbox .naslov h3{
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  #inbox .naslov h3:hover{
+    text-decoration: none;
+  }
+
+  #inbox .telo{
+    margin: 2% 0;
+  }
+
+  #inbox .telo section{
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  #inbox .telo label{
+    width: 49%;
+    float: left;
+    text-align: right;
+    line-height: 1.5em;
+  }
+
+  #inbox .telo .input{
+    width: 50%;
+    float: right;
+    line-height: 1.5em;
+    font-size: 1em;
+  }
+
+  #inbox .telo textarea{
+    height: 20em;
+  }
+
+  #inbox .telo .submit{
+    width: 100%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bolder;
+    float: none;
+  }
+
+  #inbox .telo .dvaDugmeta{
+    text-align: center;
+  }
+
+  #inbox .telo .dvaDugmeta button{
+    margin: 1%;
+    float: none;
+  }
+
+  .profile-main{
+    width: 98%;
+    text-indent: 0;
+    margin: 0 auto;
+    float: none;
+    border-left: none;
+    border-right: none;
+    min-height: 0px;
+  }
+
+  .profile-main small{
+    font-size: 0.5em;
+  }
+
+  .profile-side{
+    border-top: 1px dotted grey;
+    margin-top: 5%;
+    width: 98%;
+    float: none;
+  }
+
+  footer .box{
+    border-top: 5px solid black;
+  }
+
+  footer .copyright{
+    width: 98%;
+    font-size: 0.6em;
+    margin: 1% auto;
+  }
+
+  footer .copyright a{
+    font-weight: bolder;
+  }
 }
