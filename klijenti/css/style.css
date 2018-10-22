@@ -28,9 +28,20 @@ body{
   overflow: hidden;
 }
 
+.top-line .logo{
+  display: none;
+  width: 0%;
+  float: left;
+}
+
+.top-line h2.responsiveLogo{
+  display: none;
+  color: white;
+}
+
 nav{
   float: right;
-  width: 100%;
+  width: 95%;
   text-align: right;
 }
 
@@ -55,6 +66,27 @@ nav ul li a{
 nav ul li a:hover{
   background-color: rgba(243, 248, 0, 1);
   color: black;
+}
+
+span.nav_btn{
+  display: none;
+  line-height: 3em;
+  width: 3em;
+  background-color: rgba(243, 248, 0, 1);
+  float: right;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+}
+
+span.nav_btn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: rgba(243, 248, 0, 1);
+}
+
+nav li.responsive{
+  display: none;
 }
 
 .top-banner{
@@ -246,6 +278,10 @@ nav ul li a:hover{
   font-weight: bolder;
   display: block;
   margin-left: 5px;
+}
+
+#body .responsiveSidebar{
+  display: none;
 }
 
 #inbox{
@@ -527,4 +563,323 @@ footer .copyright a{
 
 footer .copyright a small{
   font-size: 0.8em;
+}
+
+@media screen and (max-width: 640px){
+
+  .wrapper{
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .top-line{
+    width: 100%;
+    background-color: rgba(243, 248, 0, 1);
+    color: black;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+  }
+
+  .top-line .logo{
+    display: block;
+    width: 80%;
+  }
+
+.top-line h2.responsiveLogo{
+  margin-left: 2%;
+    display: block;
+    color: black;
+    font-size: 1.5em;
+  }
+
+  nav{
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul{
+    display: none;
+  }
+
+  nav ul.responsive{
+    display: block;
+  }
+
+  nav ul li{
+    display: inline;
+    text-align: center;
+  }
+
+  nav ul li a{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 100%;
+  }
+
+  span.nav_btn{
+    display: block;
+  }
+
+  nav li.responsive{
+    display: block;
+  }
+
+  .top-banner{
+    display: none;
+  }
+
+  #body .body-box{
+    overflow: hidden;
+  }
+
+  #body .main-box{
+    width: 100%;
+    border-left: none;
+  }
+
+  #body .main-box h1{
+    font-size: 1.5em;
+  }
+
+  #body .main-box h2{
+    font-size: 1em;
+  }
+
+  #main .postavljeni .jedanoglas{
+    margin: 2% 0;
+    width: 100%;
+    float: none;
+  }
+#main .postavljeni .dugmici{
+    width: 100%;
+    float: none;
+  }
+
+  #main .dugmici li{
+    width: 90%;
+  }
+
+  #main .ponude-box{
+    width: 100%;
+    float: none;
+    margin: 1% 0;
+  }
+
+  #body form.postaviOglas{
+    width: 98%;
+  }
+
+  #body section.row label{
+    width: 40%;
+  }
+
+  #body section.row input, #body section.row select{
+    width: 55%;
+  }
+
+  #body section button{
+    width: 80%;
+  }
+
+  #body textarea{
+    height: 200px;
+    width: 55%;
+    float: right;
+    margin-bottom: 2%;
+  }
+
+  #body .responsiveSidebar{
+    display: block;
+  }
+
+  #body .responsiveSidebar ul{
+    width: 100%;
+    list-style-type: none;
+  }
+
+  #body .responsiveSidebar li{
+    width: 98%;
+    text-align: center;
+    background-color: rgba(243, 248, 0, 1);
+    border-radius: 5px;
+    line-height: 2em;
+    margin: 2% auto;
+  }
+
+  #body .responsiveSidebar a{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+
+  .sidebar{
+    display: none;
+    width: 0;
+  }
+
+  #oglasi{
+    width: 98%;
+    margin: 0 auto;
+    float: none;
+    border-left: none;
+    overflow: hidden;
+    padding-left: 0;
+  }
+
+  #oglasi aside{
+    width: 100%;
+    padding: 1em 0;
+  }
+
+  #oglasi .ponudi{
+    clear: both;
+    width: 100%;
+  }
+
+  .link-box1 a{
+    width: 50%;
+  }
+
+  #inbox{
+    width: 98%;
+    float: none;
+    padding-left: 0;
+    margin: 0 auto;
+    border-left: none;
+  }
+
+  #inbox .close a{
+    float: right;
+    background-color: rgba(252, 0, 0, 1);
+  }
+
+  #inbox h2{
+    font-size: 1.5em;
+    color: rgba(243, 248, 0, 1);
+  }
+
+  #inbox h3.nema{
+    font-size: 1em;
+  }
+
+  #inbox .nemaPoruka{
+    padding: 0;
+  }
+
+  #inbox section{
+    padding: 1% 0;
+  }
+
+  #inbox .fromTo{
+    padding: 2%;
+  }
+
+  #inbox h3:hover{
+    text-decoration: none;
+  }
+
+  #inbox .posaljiLinija input.tekst{
+    width: 100%;
+    margin: 1% 0;
+  }
+
+  #inbox .posaljiLinija input.button{
+    width: 100%;
+    margin: 1% 0;
+  }
+
+  #inbox .naslov h3{
+    font-size: 1em;
+  }
+
+  #inbox .naslov h3{
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  #inbox .naslov h3:hover{
+    text-decoration: none;
+  }
+
+  #inbox .telo{
+    margin: 2% 0;
+  }
+
+  #inbox .telo section{
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  #inbox .telo label{
+    width: 49%;
+    float: left;
+    text-align: right;
+    line-height: 1.5em;
+  }
+
+  #inbox .telo .input{
+    width: 50%;
+    float: right;
+    line-height: 1.5em;
+    font-size: 1em;
+  }
+
+  #inbox .telo textarea{
+    height: 20em;
+  }
+
+  #inbox .telo .submit{
+    width: 100%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bolder;
+    float: none;
+  }
+
+  #inbox .telo .dvaDugmeta{
+    text-align: center;
+  }
+
+  #inbox .telo .dvaDugmeta button{
+    margin: 1%;
+    float: none;
+  }
+
+  .profile-main{
+    width: 98%;
+    text-indent: 0;
+    margin: 0 auto;
+    float: none;
+    border-left: none;
+    border-right: none;
+    min-height: 0px;
+  }
+
+  .profile-main small{
+    font-size: 0.5em;
+  }
+
+  .profile-side{
+    border-top: 1px dotted grey;
+    margin-top: 5%;
+    width: 98%;
+    float: none;
+  }
+
+  footer .box{
+    border-top: 5px solid black;
+  }
+
+  footer .copyright{
+    width: 98%;
+    font-size: 0.6em;
+    margin: 1% auto;
+  }
+
+  footer .copyright a{
+    font-weight: bolder;
+  }
 }

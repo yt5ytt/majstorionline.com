@@ -19,16 +19,8 @@
           $ime = $objProfil -> ime;
           $prezime = $objProfil -> prezime;
         }
+        include('topMenu.php');
       ?>
-      <div class="top-line">
-          <div class="logo-nav wrapper">
-              <div class="logo">
-
-              </div>
-
-              <?php include("topMenu.php"); ?>
-          </div>
-      </div>
       <div class="top-banner">
         <div class="box">
           <div class="banner wrapper">

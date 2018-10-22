@@ -23,17 +23,8 @@
           $telefon1 = $objProfil -> telefon1;
           $telefon2 = $objProfil -> telefon2;
         }
+        include('topMenu.php');
       ?>
-      <div class="top-line">
-          <div class="logo-nav wrapper">
-              <div class="logo">
-
-              </div>
-
-                <?php include('topMenu.php'); ?>
-
-          </div>
-      </div>
       <div class="top-banner">
         <div class="box">
           <div class="banner wrapper">
@@ -53,6 +44,13 @@
             </div>
 
           </div><!--kraj diva .main-box-->
+        </div>
+
+        <div class="responsiveSidebar">
+          <ul>
+            <li><a href="izmeniProfil.php">Izmeni profil</a></li>
+            <li><a href="izbrisiProfil.php">Ukloni profil</a></li>
+          </ul>
         </div>
 
       </div>

@@ -17,17 +17,8 @@
             $ident = $objProfil -> ident;
             $_SESSION["username"] = $objProfil -> username;
           }
+          include('topMenu.php');
         ?>
-        <div class="top-line">
-            <div class="logo-nav wrapper">
-                <div class="logo">
-
-                </div>
-
-                  <?php include('topMenu.php'); ?>
-
-            </div>
-        </div>
         <div class="top-banner">
           <div class="box">
             <div class="banner wrapper">
