@@ -29,7 +29,7 @@
     rmdir($directory);
 ?>
   <script type="text/javascript">
-    window.location.href = "profile.php";
+    window.location.href = "index.php";
   </script>
 <?php
 
@@ -37,5 +37,5 @@
 ?>
 
 <script type="text/javascript">
-  window.location.href = "profile.php?identOglasa=<?php echo $identOglasa; ?>";
+  window.location.href = "index.php?identOglasa=<?php echo $identOglasa; ?>";
 </script>
