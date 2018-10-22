@@ -1,8 +1,8 @@
 <?php
   session_start();
   include("header.php");
-  $email = $_SESSION["email"];
-  $ident = $_SESSION["ident"];
+  @$email = $_SESSION["email"];
+  @$ident = $_SESSION["ident"];
   include("../db/db_connect.php");
 ?>
 
@@ -50,8 +50,8 @@
         }
 
         $upitPomocni = "select * from pomocni_zanat order by zanat asc";
-        $$rezPomocni = $db -> query($upitPomocni);
-        while($objPomocni = mysqli_fetch_object($$rezPomocni)){
+        $rezPomocni = $db -> query($upitPomocni);
+        while($objPomocni = mysqli_fetch_object($rezPomocni)){
           $zanatPomocni = $objPomocni -> zanat;
 ?>
             <div class="link-box">

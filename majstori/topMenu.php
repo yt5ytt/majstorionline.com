@@ -1,7 +1,7 @@
 <?php
   $upitBroj = "select status from inbox_$ident where status=0";
   $rezBroj = $db -> query($upitBroj);
-  $brojPoruka = $rezBroj -> num_rows;
+  @$brojPoruka = $rezBroj -> num_rows;
 ?>
     <div class="top-line">
         <div class="logo-nav wrapper">
