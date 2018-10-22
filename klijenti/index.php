@@ -20,7 +20,7 @@
         }
         include('topMenu.php');
       ?>
-      
+
       <div class="top-banner">
         <div class="box">
           <div class="banner wrapper">
@@ -34,7 +34,6 @@
           <div class="sidebar">
             <ul>
               <li><a href="index.php">Početak</a></li>
-              <li><a href="logout.php">Odjavi se</a></li>
             </ul>
           </div>
           <div class="main-box">
