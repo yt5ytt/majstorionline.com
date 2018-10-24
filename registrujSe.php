@@ -32,8 +32,8 @@
           </div>
 
           <div class="body">
-            <p>Da biste ste mogli da postavite oglas, prvo se morate registrovati kao klijent</p>
-            <button class="submit" onclick="window.location='registracija/register.php?korisnik=klijent'"><nobr>REGISTRUJ SE</nobr></button>
+            <p>Da biste ste mogli da postavite oglas, prvo se morate ulogovati kao klijent</p>
+            <button class="submit" onclick="window.location='login.php'"><nobr>ULOGUJ SE</nobr></button>
           </div>
 
         </div>
