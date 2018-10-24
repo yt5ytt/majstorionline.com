@@ -50,7 +50,7 @@
         $zanat = $_POST["zanat"];
         $ponuda = $_POST["ponudaPosao"];
         $tabela = "inbox_" . $identKlijenta;
-        $link = "http://" . $server . "/klijenti/profile.php?identOglasa=" . $identOglasa;
+        $link = "http://" . $server . "/klijenti/index.php?identOglasa=" . $identOglasa;
         $poruka = 'Majstor ' . $majstor . ' se javio na vaš oglas. Ponudu možete pogledati ... <a href="' . $link . '">OVDE</a>';
 
         $upis = $db -> query("insert into $identOglasa (majstor, ponuda) values ('$identMajstora', '$ponuda')");
