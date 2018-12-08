@@ -16,7 +16,7 @@
 
               <nav>
                 <ul class="nav">
-                  <li><a href="#">IDEJA SAJTA</a></li>
+                  <li><a href="idejaSajta.php">IDEJA SAJTA</a></li>
                   <li><a href="index.php">POČETNA</a></li>
                   <li><a href="registracija/register.php?korisnik=klijent">REGISTRUJ SE</a></li>
                 </ul>

@@ -13,7 +13,7 @@
 
             <nav>
 <?php
-          if($ident){
+          if($_SESSION["ident"]){
 ?>
               <ul class="nav">
                 <li class="responsive"><a href="index.php">POČETAK</a></li>

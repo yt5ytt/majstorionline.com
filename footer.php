@@ -2,7 +2,7 @@
           <div class="logo-nav wrapper">
               <nav>
                 <ul>
-                  <li><a href="mailto: #">KONTAKT</a></li>
+                  <li><a href="kontakt.php">KONTAKT</a></li>
                 </ul>
               </nav>
           </div>

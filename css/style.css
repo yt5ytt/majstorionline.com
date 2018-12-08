@@ -227,6 +227,30 @@ body{
   width: 100%;
 }
 
+#idejaSajta{
+  margin: 5em 0;
+}
+
+#kontakt{
+  margin: 12em 0;
+}
+
+.naslovIdeje{
+  text-align: center;
+  color: rgba(243, 248, 0, 1);
+  font-size: 2em;
+}
+
+.sadrzajIdeje{
+  color: white;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.kontakt{
+  text-align: center;
+}
+
 @media screen and (max-width: 640px){
   #container .logo{
     width: 80%;

@@ -13,9 +13,12 @@
               <div class="logo">
                 <h2>MajstoriOnline<small>.com</small></h2>
               </div>
+
+              <span class="nav_btn"><i class="fa fa-bars"></i></span>
+
               <nav>
-                <ul>
-                  <li><a href="#">IDEJA SAJTA</a></li>
+                <ul class="nav">
+                  <li><a href="idejaSajta.php">IDEJA SAJTA</a></li>
                   <li><a href="index.php">POČETNA</a></li>
                   <li><a href="registracija/register.php?korisnik=klijent">REGISTRUJ SE</a></li>
                 </ul>
