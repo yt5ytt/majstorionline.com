@@ -39,7 +39,7 @@
 
         <div class="sadrzajIdeje kontakt wrapper">
           <h1>Miloš Vuksanović</h1>
-          <h3><i class="fas fa-mobile-alt"></i> : +381-60-599-1001</h3>
+          <h3><i class="fas fa-mobile-alt"></i> : +381-65-555-1060</h3>
           <h3><i class="fas fa-envelope"></i> : milosrvuksanovic@gmail.com</h3>
         </div>
 

@@ -41,10 +41,10 @@
           <p>MajstoriOnline.com je potpuno besplatan servis koji na jednostavan način povezuje one kojima je potreban majstor sa majstorima.</p><br />
           <p>Kome je majstor potreban ovde može da oglasi posao bukvalno za jedan minut i
             tako izbegne pozivanje, traganje i objašnjavanje majstorima šta i kako je potrebno da se odradi i da odmah dobije cenu koliko košta posao i na taj način može da uštedi i prođe povoljnije.</p><br />
-          <p>Do sada je obično svako od nas kada mu je potreban majstor pozivao par majstora i dogovarao se oko posla. Iako je imao veliki broj majstora na raspolaganju da pozove, niko naravno nije pozivao stotine majstora, a sada ako se oglasi na ovom sajtu taj posao ima priliku da vidi veliki broj majstora i samim tim da se dobije veliki broj ponuda za posao i da se prodje povoljnije.</p><br />
+          <p>Do sada je obično svako od nas kada mu je potreban majstor pozivao par majstora i dogovarao se oko posla. Iako je imao veliki broj majstora na raspolaganju da pozove, niko naravno nije pozivao stotine majstora, a sada ako se oglasi na ovom sajtu taj posao ima priliku da vidi veliki broj majstora i samim tim da se dobije veliki broj ponuda za posao i da se prođe povoljnije.</p><br />
           <p>Ponude koje dobijete od majstora su u privatnim porukama koje su vidljive samo onima kome su i poslate, i ostala komunikacija je na taj isti način preko poruke u okviru sajta.</p><br />
-          <p>Kad se odluči za odredjenog majstora, kada se dogovori oko cene i detalja možete da razmenite brojeve telefona i da krenete u realizaciju.</p><br />
-          <p>Na ovaj način, sa jedne strane se olakšava i omogucuje najpovoljnija potraga za majstorima koji su potrebni a sa druge strane majstori imaju priliku da pronadju posao.</p>
+          <p>Kad se odluči za određenog majstora, kada se dogovori oko cene i detalja možete da razmenite brojeve telefona i da krenete u realizaciju.</p><br />
+          <p>Na ovaj način, sa jedne strane se olakšava i omogućuje najpovoljnija potraga za majstorima koji su potrebni a sa druge strane majstori imaju priliku da pronađu posao.</p>
         </div>
 
       </div>
